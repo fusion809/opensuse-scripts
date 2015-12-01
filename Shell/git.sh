@@ -25,6 +25,11 @@ function gitc {
   popd
 }
 
+function gitfgi {
+  cd ~/GitHub
+  gitc fusion809.github.io fusion809
+}
+
 # Push changes
 function push {
   git add --all && git commit -m "$1" && git push origin master
