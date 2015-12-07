@@ -15,7 +15,7 @@ alias szpr=zyprm
 # First input is the URL to the repo, e.g.,
 # http://download.opensuse.org/repositories/home:/Bumblebee-Project:/nVidia:/310.40/openSUSE_Tumbleweed/
 # second input is a name for the repo, e.g., I used home:Bumblebee-Project:nVidia:310.40 for the
-# aforementioned example. 
+# aforementioned example.
 function zyprp {
   sudo zypper ar -f $1 $2
 }
@@ -28,7 +28,8 @@ alias szps=zypsi
 
 # Update all software on one's system
 function update {
-  sudo zypper up
+        sudo zypper up
 }
+
 alias zypup=update
 alias szpu=update
