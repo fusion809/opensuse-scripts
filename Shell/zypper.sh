@@ -1,13 +1,13 @@
 # Install software from binary packages in available repos
 # Alternatively a URL to the RPM binary can be used as an input
 function zypin {
-  sudo zypper in $@
+  sudo zypper in -y $@
 }
 alias szpi=zypin
 
 # Remove software
 function zyprm {
-  sudo zypper rm $@
+  sudo zypper rm -y $@
 }
 alias szpr=zyprm
 
@@ -28,7 +28,7 @@ alias szps=zypsi
 
 # Update all software on one's system
 function update {
-        sudo zypper up
+        sudo zypper up -y
 }
 
 alias zypup=update
