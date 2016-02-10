@@ -33,3 +33,15 @@ function update {
 
 alias zypup=update
 alias szpu=update
+
+function zypdup {
+	sudo zypper dup -y
+}
+
+function zyprr {
+	sudo zypper rr $@
+}
+
+function zypar {
+	sudo zypper ar -f $@
+}

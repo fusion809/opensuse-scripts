@@ -78,6 +78,10 @@ function cdpy {
 	cd ~/GitHub/python-scripts
 }
 
+function cdobs {
+	cd ~/OBS/home:fusion809/home:fusion809
+}
+
 # -- PKGBUILDs
 function cdpk {
 	cd ~/GitHub/PKGBUILDs
