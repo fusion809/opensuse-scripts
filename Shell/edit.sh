@@ -30,3 +30,7 @@ function nx {
 function vx {
 	vim ~/.xinitrc
 }
+
+function edobs {
+	atom ~/OBS/home:fusion809/home:fusion809
+}
