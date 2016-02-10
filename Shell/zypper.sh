@@ -39,6 +39,8 @@ function zypdup {
 	sudo zypper dup
 }
 
+alias dup=zypdup
+
 function zyprr {
 	sudo zypper rr $@
 }
