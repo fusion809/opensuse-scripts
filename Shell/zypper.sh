@@ -29,7 +29,7 @@ alias szps=zypsi
 # Update all software on one's system
 function update {
         sudo zypper up -y
-	apm update
+	apm update --noconfirm
 }
 
 alias zypup=update
