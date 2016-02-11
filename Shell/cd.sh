@@ -74,6 +74,15 @@
 		cd ~/GNU_Octave
 	}
 
+	# - OBS
+	function cdobs {
+		if [[ $HOME == /home/fusion809 ]]; then
+			cd ~/OBS/home:fusion809/home:fusion809
+		elif [[ $HOME == /home/makerpm ]]; then
+			cd ~/rpmbuild/SPECS
+		fi
+	}
+
 	# - Programs
 	function cdp {
 		cd ~/Programs
