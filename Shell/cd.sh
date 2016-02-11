@@ -1,137 +1,103 @@
 # file system structure
 # ~/
 # - .atom
-function cdat {
-	echo "Use pushat for this repo"
-	cd ~/.atom
-}
+	function cdat {
+		echo "Use pushat for this repo"
+		cd ~/.atom
+	}
 
-# - .config/menus
-function cdmen {
-	cd ~/.config/menus/
-}
+# - .config
+	# - menus
+		function cdmen {
+			cd ~/.config/menus/
+		}
 
-#	- .local/share
-# -- applications
-function cdap {
-	cd ~/.local/share/applications
-}
+#	- .local
+	# - share
+	  # - applications
+			function cdap {
+				cd ~/.local/share/applications
+			}
 
-function cdapa {
-	cd ~/.local/share/applications/Atom
-}
+			function cdapa {
+				cd ~/.local/share/applications/Atom
+			}
 
-function cdgap {
-	cd ~/.local/share/applications/gVim
-}
+			function cdgap {
+				cd ~/.local/share/applications/gVim
+			}
 
-function cdvap {
-	cd ~/.local/share/applications/VirtualBox
-}
+			function cdvap {
+				cd ~/.local/share/applications/VirtualBox
+			}
 
-##########################
-function cddd {
-	cd ~/.local/share/desktop-directories
-}
+		function cddd {
+			cd ~/.local/share/desktop-directories
+		}
 
-function cdi {
-	cd ~/.local/share/icons
-}
+		function cdi {
+			cd ~/.local/share/icons
+		}
 
 # Non-hidden
-function cdabs {
-	cd ~/abs
-}
 
-function cda {
-	cd ~/AUR
-}
+	# - Desktop
+		function cdd {
+			cd ~/Desktop
+		}
 
-function cdch {
-	cd ~/chroot
-}
+	# - Downloads
+		function cddo {
+			cd ~/Downloads
+		}
 
-# - Desktop
-function cdd {
-	cd ~/Desktop
-}
+	# - GitHub
+		function cdg {
+			cd ~/GitHub
+		}
 
-# - Downloads
-function cddo {
-	cd ~/Downloads
-}
+		function cdab {
+			cd ~/GitHub/arch-builder
+		}
 
-# - GitHub
-function cdg {
-	cd ~/GitHub
-}
+		function cdarch {
+			cd ~/GitHub/arch-scripts
+		}
 
-function cdab {
-	cd ~/GitHub/arch-builder
-}
+		function cdpy {
+			cd ~/GitHub/python-scripts
+		}
+	################################
 
-function cdarch {
-	cd ~/GitHub/arch-scripts
-}
+	# - GNU_Octave
+	function cdoct {
+		cd ~/GNU_Octave
+	}
 
-function cdpy {
-	cd ~/GitHub/python-scripts
-}
+	# - Programs
+	function cdp {
+		cd ~/Programs
+	}
 
-function cdobs {
-	cd ~/OBS/home:fusion809/home:fusion809
-}
+	# - Shell
+	function cdsh {
+		cd ~/Shell
+	}
 
-# -- PKGBUILDs
-function cdpk {
-	cd ~/GitHub/PKGBUILDs
-}
+	# - VirtualBox VMs
+	function cdv {
+		cd ~/"VirtualBox VMs"
+	}
 
-# --- Atom
-function cdatp {
-	cd ~/GitHub/PKGBUILDs/atom-editor
-}
+	function cdvi {
+		cd ~/"VirtualBox VMs"/ISOs
+	}
 
-function cdatpb {
-	cd ~/GitHub/PKGBUILDs/atom-editor-beta
-}
+	function cdvdi {
+		cd ~/"VirtualBox VMs"/VDIs
+	}
 
-# --- gVim
-function cdgv {
-    cd ~/GitHub/PKGBUILDs/gvim-git
-}
-
-################################
-
-# - GNU_Octave
-function cdoct {
-	cd ~/GNU_Octave
-}
-
-# - Programs
-function cdp {
-	cd ~/Programs
-}
-
-# - Shell
-function cdsh {
-	cd ~/Shell
-}
-
-# - VirtualBox VMs
-function cdv {
-	cd ~/"VirtualBox VMs"
-}
-
-function cdvi {
-	cd ~/"VirtualBox VMs/ISOs"
-}
-
-function cdvdi {
-	cd ~/"VirtualBox VMs"/VDIs
-}
-
-####################
-function cdvim {
-	cd ~/vim
-}
+	####################
+	function cdvim {
+		cd ~/vim
+	}
