@@ -10,3 +10,7 @@ function vimb {
 	osc add v7.4.$1.tar.gz
 	osc ci -m "Updating to version 7.4.$1"
 }
+
+function vimup {
+	vimb && oscb
+}
