@@ -12,5 +12,5 @@ function vimb {
 }
 
 function vimup {
-	vimb && oscb
+	vimb $1 && oscb
 }
