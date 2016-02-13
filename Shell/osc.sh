@@ -1,3 +1,24 @@
+function atomup {
+	unset verc
+	unset verl
+	cd $SPEC
+	if [[ $USER == makerpm ]]; then
+		pushd ~/atom
+		git checkout stable
+		git pull origin stable
+		verl=$(git describe --tags | sed 's/^v//;s/-/./g')
+		popd
+		verc=$(sed -n 's/Version:\s\s\s\s\s\s\s\s*//p' $SPEC/atom.spec)
+		if [[ $verc == $verl ]]; then
+			echo "Atom is up-to-date"
+		else
+			sed -i -e "s/Version:\s\s\s\s\s\s\s\s$verc/Version:\s\s\s\s\s\s\s\s$verl/g" atom.spec
+			rm ../SOURCES/v$verc.tar.gz
+			wget -c https://github.com/atom/atom/archive/v$verl.tar.gz -O- > ../SOURCES/v$verl.tar.gz
+			push "Bumping to $verl"
+		fi
+	fi
+}
 function oscb {
 	osc build openSUSE_Tumbleweed
 }

@@ -67,6 +67,10 @@ function push {
   git add --all && git commit -m "$1" && git push origin master
 }
 
+function pushs {
+	git commit -m "$1" && git push origin master
+}
+
 function pushb {
 	if [[ $PWD == /home/fusion809/GitHub/fusion809.github.io ]]; then
 		push "$1"
