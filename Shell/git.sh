@@ -71,44 +71,20 @@ function push {
 
 # Push GitHub pages changes
 function pushp {
-  git add --all && git commit -m "$1" && git push -u origin
-master
+  git add --all && git commit -m "$1" && git push -u origin master
 }
 
 function pushss {
   push "$1" && gitsh && gitsize
 }
 
-# sabayon-scripts
-  ## Update local sabayon-scripts repo
-  function cps {
-    cp -a ~/Shell/* ~/GitHub/opensuse-scripts/Shell
-    cp -a ~/{.bashrc,.zshrc} ~/GitHub/opensuse-scripts/
-    sudo cp -a /root/{Shell,.bashrc,.zshrc} ~/GitHub/opensuse-scripts/root/
-  }
-
-  function cdos {
-	cd ~/GitHub/opensuse-scripts
-  }
-
-  ## Update sabayon-scripts GitHub repo
+# opensuse-scripts
+  ## Update opensuse-scripts GitHub repo
   function shup {
     cps && cdos && push "$1" && cd -
   }
 
 	# Menus
-	function cpm {
-		sudo cp -a /etc/xdg/menus/{cinnamon,lxde,xfce}-applications.menu /home/fusion809/GitHub/xdg-menus/etc/xdg/menus/
-		sudo cp -a /usr/share/desktop-directories/* /home/fusion809/GitHub/xdg-menus/usr/share/desktop-directories/
-        cp -a ~/.local/share/applications/* ~/GitHub/xdg-menus/.local/share/applications/
-        cp -a ~/.local/share/desktop-directories/* ~/GitHub/xdg-menus/.local/share/desktop-directories
-        cp -a ~/.config/menus/applications-kmenuedit.menu ~/GitHub/xdg-menus/.config/menus/
-	}
-
-	function cdm {
-		cd /home/fusion809/GitHub/xdg-menus/
-	}
-
 	function mup {
 		cpm && cdm && push "$1"
 	}
