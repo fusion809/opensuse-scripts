@@ -3,14 +3,18 @@ function oscb {
 }
 
 function vimup {
+	unset verc
+	unset verl
+	unset VIMDIR
 	pushd ~/GitHub/vim # change into my local Vim git repo copy
 	git pull origin master # Update local repo
 	# verc is the current patch version of Vim in vim.spec
 	# verl is the latest patch version of Vim.
-	verc=$(sed -n 's/%define patchlevel\s\s*//p' /home/fusion809/OBS/home:fusion809/home:fusion809/vim/vim.spec)
+	VIMDIR=/home/fusion809/OBS/home:fusion809/vim
+	verc=$(sed -n 's/%define patchlevel\s\s*//p' $VIMDIR/vim.spec)
 	verl=$(git describe --tags | sed 's/^v7.4.//;s/-/./g')
 	popd
-	pushd /home/fusion809/OBS/home:fusion809/vim
+	pushd $VIMDIR
 	if [[ $verc == $verl ]]; then
 		echo "Vim is up-to-date"
 	else
