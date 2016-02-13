@@ -79,7 +79,7 @@ function pushss {
 # opensuse-scripts
   ## Update opensuse-scripts GitHub repo
   function shup {
-    cps && cdos && push "$1" && cd -
+    cps && cdos && push "$1" && cpsh && cd -
   }
 
 	# Menus
