@@ -81,9 +81,9 @@ function pushss {
   function shup {
     cps && cdos && push "$1" && cpsh && cd -
 		if [[ $SHELL == /bin/zsh ]] || [[ $SHELL = /usr/bin/zsh ]]; then
-			echo "szsh" && szsh
+			szsh
 		elif [[ $SHELL == /bin/bash ]] || [[ $SHELL == /usr/bin/bash ]]; then
-			echo "sbash" && sbash
+			sbash
 		fi
   }
 
