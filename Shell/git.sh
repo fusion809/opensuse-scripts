@@ -67,6 +67,16 @@ function push {
   git add --all && git commit -m "$1" && git push origin master
 }
 
+function pushb {
+	if [[ $PWD == /home/fusion809/GitHub/fusion809.github.io ]]; then
+		push "$1"
+	else
+		pushd $FGI
+		push "$1"
+		popd
+	fi
+}
+
 # Push GitHub pages changes
 function pushp {
   git add --all && git commit -m "$1" && git push -u origin master
