@@ -80,6 +80,11 @@ function pushss {
   ## Update opensuse-scripts GitHub repo
   function shup {
     cps && cdos && push "$1" && cpsh && cd -
+		if [[ $SHELL == {/bin/zsh,/usr/bin/zsh} ]]; then
+			szsh
+		elif [[ $SHELL == {/bin/bash,/usr/bin/bash} ]]; then
+			sbash
+		fi
   }
 
 	# Menus
