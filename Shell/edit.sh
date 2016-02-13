@@ -33,7 +33,7 @@ function vx {
 
 function edobs {
 	if [[ $HOME == /home/fusion809 ]]; then
-		atom ~/OBS/home:fusion809/home:fusion809
+		atom ~/OBS/home:fusion809
 	else
 		atom ~/rpmbuild
 	fi

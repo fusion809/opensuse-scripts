@@ -10,7 +10,7 @@ function vimup {
 	verc=$(sed -n 's/%define patchlevel\s\s*//p' /home/fusion809/OBS/home:fusion809/home:fusion809/vim/vim.spec)
 	verl=$(git describe --tags | sed 's/^v7.4.//;s/-/./g')
 	popd
-	pushd /home/fusion809/OBS/home:fusion809/home:fusion809/vim
+	pushd /home/fusion809/OBS/home:fusion809/vim
 	if [[ $verc == $verl ]]; then
 		echo "Vim is up-to-date"
 	else
