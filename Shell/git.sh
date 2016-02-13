@@ -1,5 +1,3 @@
-export GHUB=$HOME/GitHub
-
 function gitc {
 	for i in "$@"
 	do
