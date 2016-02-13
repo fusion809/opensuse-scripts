@@ -13,6 +13,6 @@ function cps {
 }
 
 function cpsh {
-  rm /home/makerpm/Shell/{*.sh,cd/*.sh}
+  sudo rm /home/makerpm/Shell/{*.sh,cd/*.sh}
   sudo cp -a /home/fusion809/Shell/{*.sh,cd} /home/makerpm/Shell
 }
