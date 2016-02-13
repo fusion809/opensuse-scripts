@@ -1,6 +1,8 @@
 function update {
-	zypper up
+	zypper up -y
 }
+
+alias zypup=update
 
 function zypin {
 	zypper in $@

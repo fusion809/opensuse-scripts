@@ -32,6 +32,8 @@ function vimup {
 		unset verl
 		unset VIMDIR
 		pushd ~/GitHub/vim # change into my local Vim git repo copy
+		git checkout master
+		git fetch -p
 		git pull origin master # Update local repo
 		# verc is the current patch version of Vim in vim.spec
 		# verl is the latest patch version of Vim.
@@ -44,7 +46,7 @@ function vimup {
 			echo "Vim is up-to-date"
 		else
 			sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
-			osc rm *.gz
+			osc rm v$verc.tar.gz
 			wget -c https://github.com/vim/vim/archive/v7.4.$verl.tar.gz
 			osc add v7.4.$verl.tar.gz
 			osc ci -m "Updating to version 7.4.$verl"
