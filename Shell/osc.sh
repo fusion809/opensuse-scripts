@@ -46,11 +46,35 @@ function vimup {
 			echo "Vim is up-to-date"
 		else
 			sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
-			osc rm v$verc.tar.gz
+			osc rm v7.4.$verc.tar.gz
 			wget -c https://github.com/vim/vim/archive/v7.4.$verl.tar.gz
 			osc add v7.4.$verl.tar.gz
 			osc ci -m "Updating to version 7.4.$verl"
 		fi
 		popd
+	fi
+}
+
+function blockup {
+	unset verc
+	unset verl
+	unset BLOCKDIR
+	pushd ~/GitHub/blockify
+	git checkout master
+	git fetch -p
+	git pull origin master
+	BLOCKDIR=/home/fusion809/OBS/home:fusion809/blockify
+	verc=$(sed -n 's/Version:\s\s\s\s\s\s\s\s\s*//p' $BLOCKDIR/blockify.spec)
+	verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
+	popd
+	pushd $BLOCKDIR
+	if [[ $verc == $verl ]]; then
+		echo "Blockify is up-to-date"
+	else
+		sed -i -e "s/Version:        $verc/Version:        $verl/g" blockify.spec
+		osc rm v$verc.tar.gz
+		wget -c https://github.com/mikar/blockify/archive/v$verl.tar.gz
+		osc add v$verl.tar.gz
+		osc ci -m "Updating to release $verl"
 	fi
 }
