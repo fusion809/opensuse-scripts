@@ -1,15 +1,7 @@
-function abash {
-	atom ~/.bashrc ~/Shell
-}
-
 function nbash {
-        nano ~/.bashrc
+  nano ~/.bashrc
 }
 
 function sbash {
 	source ~/.bashrc
-}
-
-function edsh {
-	atom ~/Shell
 }

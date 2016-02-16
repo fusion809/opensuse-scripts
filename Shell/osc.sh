@@ -1,3 +1,4 @@
+# Update to latest stable Atom version
 function atomup {
 	unset verc
 	unset verl

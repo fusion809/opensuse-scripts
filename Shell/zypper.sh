@@ -28,13 +28,15 @@ alias szps=zypsi
 
 # Update all software on one's system
 function update {
-  sudo zypper up -y
-	apm update --noconfirm
+  zypup
+	apmup
+  atomup
   vimup
 }
 
-alias zypup=update
-alias szpu=update
+function zypup {
+  sudo zypper up -y
+}
 
 # Dist upgrade
 function zypdup {
