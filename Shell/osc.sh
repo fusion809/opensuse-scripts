@@ -72,14 +72,15 @@ function blockup {
 	verc=$(sed -n 's/Version:\s\s\s\s\s\s\s\s\s*//p' $BLOCKDIR/blockify.spec)
 	verl=$(git describe --abbrev=0 --tags | sed 's/v//g')
 	popd
-	pushd $BLOCKDIR
 	if [[ $verc == $verl ]]; then
 		echo "Blockify is up-to-date"
 	else
+		pushd $BLOCKDIR
 		sed -i -e "s/Version:        $verc/Version:        $verl/g" blockify.spec
 		osc rm v$verc.tar.gz
 		wget -c https://github.com/mikar/blockify/archive/v$verl.tar.gz
 		osc add v$verl.tar.gz
 		osc ci -m "Updating to release $verl"
+		popd
 	fi
 }
