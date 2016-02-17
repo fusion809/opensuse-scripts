@@ -1,6 +1,3 @@
-
-
-
 # Blog
 function edblog {
 	atom ~/GitHub/fusion809.github.io
