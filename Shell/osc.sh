@@ -2,8 +2,8 @@
 function atomup {
 	unset verc
 	unset verl
-	cd $SPEC
 	if [[ $USER == makerpm ]]; then
+		pushd $SPEC
 		if ! [[ -d $HOME/atom ]]; then
 			git clone https://github.com/atom/atom $HOME/atom
 		fi
@@ -21,6 +21,9 @@ function atomup {
 			wget -c https://github.com/atom/atom/archive/v$verl.tar.gz -O- > ../SOURCES/v$verl.tar.gz
 			push "Bumping to $verl"
 		fi
+		popd
+	else
+		echo "You must run this command as the makerpm user! Run su - makerpm to change to this user."
 	fi
 }
 function oscb {
