@@ -44,7 +44,7 @@ function vimup {
 		# verl is the latest patch version of Vim.
 		VIMDIR=/home/fusion809/OBS/home:fusion809/vim
 		verc=$(sed -n 's/%define patchlevel\s\s*//p' $VIMDIR/vim.spec)
-		verl=$(git describe --tags | sed 's/^v7.4.//;s/-/./g')
+		verl=$(git describe --abbrev=0 --tags | sed 's/v7.4.//g')
 		popd
 		if [[ $verc == $verl ]]; then
 			echo "Vim is up-to-date"
