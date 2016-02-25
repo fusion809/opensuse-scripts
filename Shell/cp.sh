@@ -16,3 +16,9 @@ function cpsh {
   sudo rm /home/makerpm/Shell/{*.sh,cd/*.sh}
   sudo cp -a /home/fusion809/Shell/{*.sh,cd} /home/makerpm/Shell
 }
+
+function cpzsh {
+	cp -a ~/.oh-my-zsh/themes/{hcompact,hornix}.zsh-theme ~/GitHub/zsh-theme
+	cd ~/GitHub/zsh-theme
+	push "Updating"
+}
