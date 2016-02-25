@@ -15,9 +15,6 @@ function blockup {
 	else
 		pushd $BLOCKDIR
 		sed -i -e "s/Version:        $verc/Version:        $verl/g" blockify.spec
-		osc rm v$verc.tar.gz
-		wget -c https://github.com/mikar/blockify/archive/v$verl.tar.gz
-		osc add v$verl.tar.gz
 		osc ci -m "Updating to release $verl"
 		popd
 	fi
@@ -44,9 +41,6 @@ function vimup {
 		else
 			pushd $VIMDIR
 			sed -i -e "s/%define patchlevel  $verc/%define patchlevel  $verl/g" vim.spec
-			osc rm v7.4.$verc.tar.gz
-			wget -c https://github.com/vim/vim/archive/v7.4.$verl.tar.gz
-			osc add v7.4.$verl.tar.gz
 			osc ci -m "Updating to version 7.4.$verl"
 			popd
 		fi
