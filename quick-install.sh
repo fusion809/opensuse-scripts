@@ -16,7 +16,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
 
 # Get my self-made zsh-themes
 git clone https://github.com/fusion809/zsh-theme ~/GitHub/zsh-theme
-cp -a ~/GitHub/zsh-theme/{hcompat,hornix}.zsh-theme ~/.oh-my-zsh/themes/
+cp -a ~/GitHub/zsh-theme/*.zsh-theme ~/.oh-my-zsh/themes/
 
 # Change default login shell to Zsh
 chsh -s /bin/zsh
