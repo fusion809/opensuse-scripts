@@ -14,3 +14,11 @@ function cdrpm {
     su -c "cd ~/rpmbuild" - makerpm
   fi
 }
+
+function cdobsae {
+	cd ~/OBS/home:fusion809:arch_extra:extra
+}
+
+function cdobsa {
+	cd ~/OBS/home:fusion809:arch_extra
+}
