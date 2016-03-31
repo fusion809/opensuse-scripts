@@ -22,3 +22,11 @@ function cdobsae {
 function cdobsa {
 	cd ~/OBS/home:fusion809:arch_extra
 }
+
+function cdobsc {
+	cd ~/OBS/home:fusion809:arch_extra:community
+}
+
+function cdobsp {
+	cd ~/OBS/home:fusion809:arch_extra:python
+}
