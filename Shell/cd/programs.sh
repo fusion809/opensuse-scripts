@@ -1,23 +1,23 @@
 # - GNU_Octave
 function cdoct {
-  cd ~/GNU_Octave
+  cd $HOME/GNU_Octave
 }
 
 # - Programs
 function cdp {
-  cd ~/Programs
+  cd $HOME/Programs
 }
 
 function cdpa {
-  cd ~/Programs/atom
+  cd $HOME/Programs/atom
 }
 
 # - Shell
 function cdsh {
-  cd ~/Shell
+  cd $HOME/Shell
 }
 
 ####################
 function cdvim {
-  cd ~/vim
+  cd $HOME/vim
 }

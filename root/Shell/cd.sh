@@ -1,5 +1,5 @@
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdap {

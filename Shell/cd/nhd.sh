@@ -1,13 +1,13 @@
 # file system structure
-# ~/
+# $HOME/
 # Non-hidden
 
 	# - Desktop
 		function cdd {
-			cd ~/Desktop
+			cd $HOME/Desktop
 		}
 
 	# - Downloads
 		function cddo {
-			cd ~/Downloads
+			cd $HOME/Downloads
 		}

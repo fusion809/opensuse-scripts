@@ -1,16 +1,16 @@
 # - OBS
 function cdobs {
   if [[ $USER == fusion809 ]]; then
-    cd ~/OBS/home:fusion809
+    cd $HOME/OBS/home:fusion809
   elif [[ $USER == makerpm ]]; then
-    cd ~/rpmbuild/SPECS
+    cd $HOME/rpmbuild/SPECS
   fi
 }
 
 function cdrpm {
   if [[ $USER == makerpm ]]; then
-    cd ~/rpmbuild
+    cd $HOME/rpmbuild
   elif [[ $USER == fusion809 ]]; then
-    su -c "cd ~/rpmbuild" - makerpm
+    su -c "cd $HOME/rpmbuild" - makerpm
   fi
 }

@@ -7,7 +7,7 @@ function atomup {
 		if ! [[ -d $HOME/atom ]]; then
 			git clone https://github.com/atom/atom $HOME/atom
 		fi
-		pushd ~/atom
+		pushd $HOME/atom
 		git checkout stable
 		git pull origin stable
 		verl=$(git describe --tags | sed 's/^v//;s/-/./g')

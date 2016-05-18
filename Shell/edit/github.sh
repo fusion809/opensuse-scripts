@@ -5,10 +5,10 @@ function edpk {
 
 # Python scripts
 function edpy {
-	atom ~/GitHub/python-scripts
+	atom $HOME/GitHub/python-scripts
 }
 
 # xdg-menus
 function edxd {
-  atom ~/GitHub/xdg-menus
+  atom $HOME/GitHub/xdg-menus
 }

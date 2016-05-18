@@ -1,12 +1,12 @@
 # - VirtualBox VMs
 function cdv {
-  cd ~/"VirtualBox VMs"
+  cd $HOME/"VirtualBox VMs"
 }
 
 function cdvi {
-  cd ~/"VirtualBox VMs"/ISOs
+  cd $HOME/"VirtualBox VMs"/ISOs
 }
 
 function cdvdi {
-  cd ~/"VirtualBox VMs"/VDIs
+  cd $HOME/"VirtualBox VMs"/VDIs
 }

@@ -1,30 +1,30 @@
 # Shells
 function edsh {
-	atom ~/Shell
+	atom $HOME/Shell
 }
 
-# ~/.bashrc
+# $HOME/.bashrc
 function abash {
-	atom ~/.bashrc ~/Shell
+	atom $HOME/.bashrc $HOME/Shell
 }
 
 function nbash {
-  nano ~/.bashrc
+  nano $HOME/.bashrc
 }
 
 function vbash {
-  vim ~/.bashrc
+  vim $HOME/.bashrc
 }
 
-# ~/.zshrc
+# $HOME/.zshrc
 function azsh {
-  atom ~/.zshrc ~/Shell
+  atom $HOME/.zshrc $HOME/Shell
 }
 
 function nzsh {
-  nano ~/.zshrc
+  nano $HOME/.zshrc
 }
 
 function vzsh {
-  vim ~/.zshrc
+  vim $HOME/.zshrc
 }

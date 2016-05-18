@@ -1,4 +1,4 @@
 # rpmbuild
 function edrpm {
-  atom ~/rpmbuild
+  atom $HOME/rpmbuild
 }

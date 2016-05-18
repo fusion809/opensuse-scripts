@@ -2,7 +2,7 @@ function blockup {
 	unset verc
 	unset verl
 	unset BLOCKDIR
-	pushd ~/GitHub/blockify
+	pushd $HOME/GitHub/blockify
 	git checkout master
 	git fetch -p
 	git pull origin master
@@ -26,7 +26,7 @@ function vimup {
 		unset verl
 		unset VIMDIR
 		ORPWD=$PWD
-		pushd ~/GitHub/vim # change into my local Vim git repo copy
+		pushd $HOME/GitHub/vim # change into my local Vim git repo copy
 		git checkout master
 		git fetch -p
 		git pull origin master # Update local repo
@@ -55,7 +55,7 @@ function rvimup {
     unset VIMDIR
     unset DATE
     ORPWD=$PWD
-    pushd ~/GitHub/vim # change into my local Vim git repo copy
+    pushd $HOME/GitHub/vim # change into my local Vim git repo copy
     git checkout master
     git fetch -p
     git pull origin master # Update local repo

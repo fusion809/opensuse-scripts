@@ -1,18 +1,18 @@
 # - GitHub
 function cdg {
-  cd ~/GitHub
+  cd $HOME/GitHub
 }
 
 function cdab {
-  cd ~/GitHub/arch-builder
+  cd $HOME/GitHub/arch-builder
 }
 
 function cdos {
-  cd ~/GitHub/opensuse-scripts
+  cd $HOME/GitHub/opensuse-scripts
 }
 
 function cdpy {
-  cd ~/GitHub/python-scripts
+  cd $HOME/GitHub/python-scripts
 }
 
 function cdm {
