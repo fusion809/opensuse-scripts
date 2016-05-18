@@ -1,9 +1,9 @@
 function cpman {
-  sudo cp -a /usr/share/man/man$1/$2.$1 ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1 $HOME/Documents/Manpages
 }
 
 function cpmang {
-  sudo cp -a /usr/share/man/man$1/$2.$1.gz ~/Documents/Manpages
+  sudo cp -a /usr/share/man/man$1/$2.$1.gz $HOME/Documents/Manpages
 }
 
 function manconv {
@@ -30,9 +30,9 @@ function manconvgc {
 }
 
 function manhtml {
-  cpman $1 $2 && manconv $1 $2 && cp -a ~/Documents/Manpages/* $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+  cpman $1 $2 && manconv $1 $2 && cp -a $HOME/Documents/Manpages/* $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
 }
 
 function manhtmlg {
-  cpmang $1 $2 && manconvg $1 $2 && cp -a ~/Documents/Manpages/* $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+  cpmang $1 $2 && manconvg $1 $2 && cp -a $HOME/Documents/Manpages/* $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
 }

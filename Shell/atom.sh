@@ -1,6 +1,6 @@
 # Blog
 function edblog {
-	atom ~/GitHub/fusion809.github.io
+	atom $HOME/GitHub/fusion809.github.io
 }
 
 # Menus
@@ -10,29 +10,29 @@ function edmen {
 
 # Open Build Service
 function edobs {
-	atom ~/OBS/home:fusion809
+	atom $HOME/OBS/home:fusion809
 }
 
 # PKGBUILDs
 function edpk {
-	atom ~/GitHub/PKGBUILDs
+	atom $HOME/GitHub/PKGBUILDs
 }
 
 # Python scripts
 function edpy {
-	atom ~/GitHub/python-scripts
+	atom $HOME/GitHub/python-scripts
 }
 
 # rpmbuild
 function edrpm {
-  atom ~/rpmbuild
+  atom $HOME/rpmbuild
 }
 
 # Shells
 function abash {
-	atom ~/.bashrc ~/Shell
+	atom $HOME/.bashrc $HOME/Shell
 }
 
 function edsh {
-	atom ~/Shell
+	atom $HOME/Shell
 }

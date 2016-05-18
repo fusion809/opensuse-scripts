@@ -2,11 +2,11 @@
 # Copyright (c) SuSE GmbH Nuernberg
 
 # There are 3 different types of shells in bash: the login shell, normal shell
-# and interactive shell. Login shells read ~/.profile and interactive shells
-# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
+# and interactive shell. Login shells read $HOME/.profile and interactive shells
+# read $HOME/.bashrc; in our setup, /etc/profile sources $HOME/.bashrc - thus all
 # settings made here will also take effect in a login shell.
 #
-# NOTE: It is recommended to make language settings in ~/.profile rather than
+# NOTE: It is recommended to make language settings in $HOME/.profile rather than
 # here, since multilingual X sessions would not work properly if LANG is over-
 # ridden in every subshell.
 
@@ -25,9 +25,9 @@
 #export PILOTPORT=/dev/pilot
 #export PILOTRATE=115200
 
-test -s ~/.alias && . ~/.alias || true
+test -s $HOME/.alias && . $HOME/.alias || true
 
-for i in ~/Shell/*.sh
+for i in $HOME/Shell/*.sh
 do
     . "$i"
 done

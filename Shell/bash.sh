@@ -1,3 +1,3 @@
 function sbash {
-	source ~/.bashrc
+	source $HOME/.bashrc
 }

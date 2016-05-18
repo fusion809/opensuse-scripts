@@ -1,7 +1,7 @@
 # file system structure
-# ~/
+# $HOME/
 
-for i in ~/Shell/cd/*.sh
+for i in $HOME/Shell/cd/*.sh
 do
 	. "$i"
 done
@@ -11,10 +11,10 @@ done
 
 	# - Desktop
 		function cdd {
-			cd ~/Desktop
+			cd $HOME/Desktop
 		}
 
 	# - Downloads
 		function cddo {
-			cd ~/Downloads
+			cd $HOME/Downloads
 		}

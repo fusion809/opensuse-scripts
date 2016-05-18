@@ -1,6 +1,6 @@
 # Blog
 function edblog {
-	atom ~/GitHub/fusion809.github.io
+	atom $HOME/GitHub/fusion809.github.io
 }
 
 # Menus
@@ -10,31 +10,31 @@ function edmen {
 
 # PKGBUILDs
 function edpk {
-	atom ~/GitHub/PKGBUILDs
+	atom $HOME/GitHub/PKGBUILDs
 }
 
 # Python scripts
 function edpy {
-	atom ~/GitHub/python-scripts
+	atom $HOME/GitHub/python-scripts
 }
 
 # Shell scripts
 function edsh {
-	atom ~/Shell
+	atom $HOME/Shell
 }
 
 function nx {
-	nano ~/.xinitrc
+	nano $HOME/.xinitrc
 }
 
 function vx {
-	vim ~/.xinitrc
+	vim $HOME/.xinitrc
 }
 
 function edobs {
 	if [[ $HOME == /home/fusion809 ]]; then
-		atom ~/OBS/home:fusion809
+		atom $HOME/OBS/home:fusion809
 	else
-		atom ~/rpmbuild
+		atom $HOME/rpmbuild
 	fi
 }

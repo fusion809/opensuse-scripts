@@ -1,5 +1,5 @@
 function cdem {
-	cd ~/.emacs.d
+	cd $HOME/.emacs.d
 }
 
 function spup {

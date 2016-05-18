@@ -1,18 +1,18 @@
 # Edit vimrc in nano
 function nvim {
-    nano ~/.vimrc
+    nano $HOME/.vimrc
 }
 
 alias nvimrc=nvim
 
 # Edit vimrc in Vim
 function vimrc {
-	vim ~/.vimrc
+	vim $HOME/.vimrc
 }
 
 alias vvim=vimrc
 
 # Edit vimrc in gvim
 function gvimrc {
-	gvim ~/.vimrc
+	gvim $HOME/.vimrc
 }

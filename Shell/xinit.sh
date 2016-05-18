@@ -1,14 +1,14 @@
 # atom xinitrc
 function ax {
-	atom ~/.xinitrc
+	atom $HOME/.xinitrc
 }
 
 # nano xinitrc
 function nx {
-	nano ~/.xinitrc
+	nano $HOME/.xinitrc
 }
 
 # vim xinitrc
 function vx {
-	vim ~/.xinitrc
+	vim $HOME/.xinitrc
 }
