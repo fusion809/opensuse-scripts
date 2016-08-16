@@ -7,9 +7,9 @@ function cpm {
 }
 
 function cps {
-  cp -a $HOME/Shell/* $HOME/GitHub/opensuse-scripts/Shell
-  cp -a $HOME/{.bashrc,.zshrc} $HOME/GitHub/opensuse-scripts/
-  sudo cp -a /root/{Shell,.bashrc,.zshrc} $HOME/GitHub/opensuse-scripts/root/
+  cp -a $HOME/Shell/* $HOME/GitHub/mine/opensuse-scripts/Shell
+  cp -a $HOME/{.bashrc,.zshrc} $HOME/GitHub/mine/opensuse-scripts/
+  sudo cp -a /root/{Shell,.bashrc,.zshrc} $HOME/GitHub/mine/opensuse-scripts/root/
 }
 
 function cpsh {

@@ -54,7 +54,7 @@ plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
-  export PATH="/home/fusion809/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games"
+  export PATH="/home/fusion809/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

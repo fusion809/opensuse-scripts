@@ -32,7 +32,7 @@ function gitsw {
   git remote rm origin
   git remote rm upstream
 	CWD=${PWD##*/}
-	if [[ "$CWD" =$HOME ^\. ]]; then
+	if [[ "$CWD" =~ ^\. ]]; then
 		GWD="${CWD#.}"
 	  if [[ -n "$1" ]]
 	    then
