@@ -1,26 +1,29 @@
 #	- .local
 	# - share
-	  # - applications
-			function cdap {
-				cd $HOME/.local/share/applications
-			}
+	function cdls {
+		cd "$LS/$1"
+	}
+    # - applications
+		function cdap {
+			cdls "applications/$1"
+		}
 
 			function cdapa {
-				cd $HOME/.local/share/applications/Atom
+				cdap "Atom/$1"
 			}
 
 			function cdgap {
-				cd $HOME/.local/share/applications/gVim
+				cdap "gVim/$1"
 			}
 
 			function cdvap {
-				cd $HOME/.local/share/applications/VirtualBox
+				cdap "VirtualBox"
 			}
 
 		function cddd {
-			cd $HOME/.local/share/desktop-directories
+			cdls "desktop-directories/$1"
 		}
 
 		function cdi {
-			cd $HOME/.local/share/icons
+			cdls "icons/$1"
 		}

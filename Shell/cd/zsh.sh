@@ -1,11 +1,11 @@
 function cdzsh {
-	cd $HOME/.oh-my-zsh
+	cd $HOME/.oh-my-zsh/$1
 }
 
 function cdzp {
-	cd $HOME/.oh-my-zsh/plugins
+	cdzsh "plugins/$1"
 }
 
 function cdzt {
-	cd $HOME/.oh-my-zsh/themes
+	cdzsh "themes/$1"
 }
