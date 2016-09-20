@@ -11,3 +11,7 @@ function zypin {
 function zyprm {
 	zypper rm $@
 }
+
+function dup {
+	zypper dup
+}

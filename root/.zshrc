@@ -87,3 +87,5 @@ for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
+
+export PATH=$PATH:/sbin
