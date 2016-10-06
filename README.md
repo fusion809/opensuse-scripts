@@ -7,5 +7,5 @@ my life more convenient on my openSUSE machine. They are presented here mostly f
 To quickly install this repo on your PC run:
 
 ```bash
-sh -c "$(wget -cqO- https://git.io/vaKlZ)"
+/bin/bash -c "$(wget -cqO- https://git.io/vaKlZ)"
 ```
