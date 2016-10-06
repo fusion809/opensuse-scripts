@@ -13,18 +13,11 @@ if ! [[ -f /bin/zsh ]]; then
 fi
 
 # Clone opensuse-scripts repo
-if ! [[ -d $HOME/GitHub/opensuse-scripts ]] || ! [[ -d $HOME/GitHub/mine/opensuse-scripts ]]; then
+if ! [[ -d $HOME/GitHub/mine/opensuse-scripts ]]; then
   git clone https://github.com/fusion809/opensuse-scripts $HOME/GitHub/mine/opensuse-scripts
   # Copy across
   cp -a $HOME/GitHub/mine/opensuse-scripts/{Shell,.bashrc,.zshrc} $HOME/
   sudo cp -a $HOME/GitHub/mine/opensuse-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/opensuse-scripts ]]; then
-  cd $HOME/GitHub/opensuse-scripts
-  git pull origin master
-  cd -
-  # Copy across
-  cp -a $HOME/GitHub/opensuse-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/opensuse-scripts/root/{Shell,.bashrc,.zshrc} /root/
 elif [[ -d $HOME/GitHub/mine/opensuse-scripts ]]; then
   cd $HOME/GitHub/mine/opensuse-scripts
   git pull origin master
