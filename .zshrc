@@ -1,6 +1,6 @@
 TERM=xterm-256color
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/fusion809/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in $HOME/.oh-my-zsh/themes/
@@ -52,9 +52,6 @@ ZSH_THEME="hcompact"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting)
 
-# User configuration
-
-  export PATH="/home/fusion809/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

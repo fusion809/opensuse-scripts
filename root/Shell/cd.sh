@@ -1,19 +1,19 @@
 function cdsh {
-	cd $HOME/Shell
+	cd "$HOME/Shell/$1"
 }
 
 function cdap {
-	cd /usr/share/applications
+	cd "/usr/share/applications/$1"
 }
 
 function cdi {
-	cd /usr/share/icons
+	cd "/usr/share/icons/$1"
 }
 
 function cdd {
-	cd /usr/share/desktop-directories
+	cd "/usr/share/desktop-directories/$1"
 }
 
 function cdm {
-	cd /etc/xdg/menus
+	cd "/etc/xdg/menus/$1"
 }

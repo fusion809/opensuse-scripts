@@ -1,15 +1,15 @@
 function szsh {
-	source $HOME/.zshrc
+	source "$HOME/.zshrc"
 }
 
 function azsh {
-	atom $HOME/.zshrc
+	atom "$HOME/.zshrc"
 }
 
 function vzsh {
-	vim $HOME/.zshrc
+	vim "$HOME/.zshrc"
 }
 
 function nzsh {
-	nano $HOME/.zshrc
+	nano "$HOME/.zshrc"
 }
