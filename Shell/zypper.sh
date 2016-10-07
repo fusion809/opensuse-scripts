@@ -32,7 +32,7 @@ function zypup {
 }
 
 function update {
-  zypup && apmup && vimup
+  zypup && apmup
 }
 
 # Dist upgrade
