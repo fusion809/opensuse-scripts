@@ -9,8 +9,10 @@ if ! `which ssh >/dev/null 2>&1`; then
 fi
 
 if ! [[ -f /bin/zsh ]]; then
-  sudo zypper in -y zsh git
+  sudo zypper in -y zsh
 fi
+
+sudo zypper in -y git
 
 # Clone opensuse-scripts repo
 if ! [[ -d $HOME/GitHub/mine/scripts/opensuse-scripts ]]; then
