@@ -8,11 +8,11 @@ function cdab {
 }
 
 function cdos {
-  cd $HOME/GitHub/mine/opensuse-scripts
+  cd $HOME/GitHub/mine/scripts/opensuse-scripts
 }
 
 function cdpy {
-  cd $HOME/GitHub/mine/python-scripts
+  cd $HOME/GitHub/mine/scripts/python-scripts
 }
 
 function cdm {
