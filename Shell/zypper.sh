@@ -28,7 +28,7 @@ alias szps=zypsi
 
 # Update all software on one's system
 function zypup {
-  sudo zypper up -y
+  sudo zypper up -y --auto-agree-with-licenses
 }
 
 function update {
