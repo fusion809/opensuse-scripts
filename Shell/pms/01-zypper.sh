@@ -24,7 +24,6 @@ function zyprp {
 function zypsi {
   sudo zypper si $@
 }
-alias szps=zypsi
 
 # Update all software on one's system
 function zypup {
@@ -51,3 +50,5 @@ function zypar {
 function zyps {
 	zypper se "$@"
 }
+
+alias zps=zyps
