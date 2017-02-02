@@ -1,10 +1,6 @@
 # - OBS
 function cdobs {
-  if [[ $USER == fusion809 ]]; then
-    cd $HOME/OBS/home:fusion809/$1
-  elif [[ $USER == makerpm ]]; then
-    cd $HOME/rpmbuild/SPECS/$1
-  fi
+	cd $HOME/OBS/$1
 }
 
 function cdrpm {
@@ -16,17 +12,17 @@ function cdrpm {
 }
 
 function cdobsae {
-	cd $HOME/OBS/home:fusion809:arch_extra:extra/$1
+	cdobs "home:fusion809:arch_extra:extra/$1"
 }
 
 function cdobsa {
-	cd $HOME/OBS/home:fusion809:arch_extra/$1
+	cdobs "home:fusion809:arch_extra/$1"
 }
 
 function cdobsc {
-	cd $HOME/OBS/home:fusion809:arch_extra:community/$1
+	cdobs "home:fusion809:arch_extra:community/$1"
 }
 
 function cdobsp {
-	cd $HOME/OBS/home:fusion809:arch_extra:python/$1
+	cdobs "home:fusion809:arch_extra:python/$1"
 }
