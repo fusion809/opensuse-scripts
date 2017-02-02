@@ -28,12 +28,12 @@ alias szps=zypsi
 
 # Update all software on one's system
 function zypup {
-  sudo zypper up -y --auto-agree-with-licenses
+	sudo zypper refresh && sudo zypper up -y --auto-agree-with-licenses
 }
 
 # Dist upgrade
 function zypdup {
-	sudo zypper dup
+	sudo zypper refresh && sudo zypper dup
 }
 
 alias dup=zypdup
