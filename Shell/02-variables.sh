@@ -1,4 +1,5 @@
-export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sbin"
+# PATH
+export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin"
 # $GHUB
 export GHUB=$HOME/GitHub
 # $GHUB/mine
