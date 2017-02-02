@@ -1,5 +1,5 @@
 # PATH
-export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin:$HOME/Programs/targz/docker"
+export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin"
 # $GHUB
 export GHUB=$HOME/GitHub
 # $GHUB/mine
