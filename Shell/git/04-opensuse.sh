@@ -12,5 +12,5 @@ function cps {
 
 ## Update opensuse-scripts GitHub repo
 function shup {
-	cps && cdfs && push "$1" && szsh && cd -
+	cps && cdos && push "$1" && szsh && cd -
 }

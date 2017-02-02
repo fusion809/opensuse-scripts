@@ -22,3 +22,6 @@ function cdfs {
 	cdsc "fedora-scripts/$1"
 }
 
+function cdos {
+	cdsc "opensuse-scripts/$1"
+}
