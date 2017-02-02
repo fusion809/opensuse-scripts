@@ -31,10 +31,6 @@ function zypup {
   sudo zypper up -y --auto-agree-with-licenses
 }
 
-function update {
-  zypup && apmup
-}
-
 # Dist upgrade
 function zypdup {
 	sudo zypper dup
