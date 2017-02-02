@@ -47,3 +47,7 @@ function zyprr {
 function zypar {
 	sudo zypper ar -f $@
 }
+
+function zyps {
+	zypper se "$@"
+}
