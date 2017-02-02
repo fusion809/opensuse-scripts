@@ -2,6 +2,10 @@ function cdat {
   cd $HOME/.atom
 }
 
+function cdem {
+	cd $HOME/.emacs.d
+}
+
 function cdmen {
   cd $HOME/.config/menus/$1
 }
