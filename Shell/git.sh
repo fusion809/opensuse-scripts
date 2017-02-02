@@ -93,7 +93,7 @@ function pushss {
 # opensuse-scripts
   ## Update opensuse-scripts GitHub repo
   function shup {
-    cps && cdos && push "$1" && cpsh && cd -
+    cps && cdos && push "$1" && szsh && cd -
 		if [[ $SHELL == /bin/zsh ]] || [[ $SHELL = /usr/bin/zsh ]]; then
 			szsh
 		elif [[ $SHELL == /bin/bash ]] || [[ $SHELL == /usr/bin/bash ]]; then

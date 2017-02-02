@@ -12,6 +12,10 @@ function cps {
   sudo cp -a /root/{Shell,.bashrc,.zshrc} $OS/root/
 }
 
+function cpv {
+  cp $HOME/.vimrc $GHUBM
+}
+
 function cpsh {
   sudo rm /home/makerpm/Shell/{*.sh,cd/*.sh}
   sudo cp -a /home/fusion809/Shell/{*.sh,cd} /home/makerpm/Shell

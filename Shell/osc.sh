@@ -1,3 +1,3 @@
 function oscb {
-	osc build openSUSE_Tumbleweed
+	osc build openSUSE_Tumbleweed --noverify
 }
