@@ -6,6 +6,10 @@ function cdcfe {
 	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
 }
 
+function cddo {
+	cd $HOME/Downloads/$1
+}
+
 function cdm {
 	cd $HOME/Music/$1
 }
