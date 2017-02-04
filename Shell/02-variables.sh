@@ -4,6 +4,8 @@ export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sb
 export GHUB=$HOME/GitHub
 # $GHUB/mine
 export GHUBM=$GHUB/mine
+# $GHUB/others
+export GHUBO=$GHUB/others
 # $GHUBM/editors
 export EDT=$GHUBM/editors
 # $GHUB/mine/packaging
