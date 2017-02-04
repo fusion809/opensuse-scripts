@@ -64,10 +64,17 @@ function cdvs {
 	cd $HOME/Videos/SO
 }
 
+if ! [[ -d $HOME/"VirtualBox VMs" ]]; then
+	mkdir -p $HOME/"VirtualBox VMs"
+fi
+
 function cdvi {
 	cd $HOME/"VirtualBox VMs"/ISOs
 }
 
+if ! [[ -d $HOME/OBS ]]; then
+	mkdir -p $HOME/OBS
+fi
 
 function cdobs {
 	cd $HOME/OBS/$1
