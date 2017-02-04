@@ -10,6 +10,7 @@ function zyprm {
   sudo zypper rm -y $@
 }
 alias szpr=zyprm
+alias zpr=zyprm
 
 # Add zypper repo.
 # First input is the URL to the repo, e.g.,
@@ -20,15 +21,22 @@ function zyprp {
   sudo zypper ar -f $1 $2
 }
 
+alias zprp=zyprp
+
 # Install software from src.rpm packages in available repos
 function zypsi {
   sudo zypper si $@
 }
 
+alias zpsi=zypsi
+
 # Update all software on one's system
 function zypup {
 	sudo zypper refresh && sudo zypper up -y --auto-agree-with-licenses
 }
+
+alias zpup=zypup
+alias zup=zypup
 
 # Dist upgrade
 function zypdup {
@@ -42,10 +50,14 @@ function zyprr {
 	sudo zypper rr $@
 }
 
+alias zprr=zyprr
+
 # Add repository
 function zypar {
 	sudo zypper ar -f $@
 }
+
+alias zpar=zypar
 
 function zyps {
 	zypper se "$@"
