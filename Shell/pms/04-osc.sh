@@ -1,10 +1,17 @@
+# Installing OSC
 if ! [[ -f /usr/bin/osc ]]; then
 	zypin osc
 fi
 
 function oscb {
-	osc build openSUSE_Tumbleweed --noverify
+	osc build openSUSE_Tumbleweed --noverify "$@"
 }
+
+function oscbns {
+	oscb --no-service "$@"
+}
+
+alias oscbs=oscbns
 
 function ovimup {
   cdobsh $1
