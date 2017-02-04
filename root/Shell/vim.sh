@@ -2,8 +2,12 @@ function vsd {
 	vim /etc/sddm.conf
 }
 
-function vsh {
+function vrsh {
 	vim $HOME/Shell
+}
+
+function vsh { 
+	vim *.sh
 }
 
 function vzp {
