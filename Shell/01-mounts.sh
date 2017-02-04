@@ -1,6 +1,6 @@
-# Mount Arch Linux
+# Mount Fedora
 if ! `grep -qs "/mnt" /proc/mounts`; then
-  sudo mount /dev/sdb1 /mnt
+  sudo mount /dev/sdb3 /mnt
   sudo mount -t proc proc /mnt/proc
   sudo mount --rbind /dev /mnt/dev
   sudo mount --make-rslave /mnt/dev
@@ -9,5 +9,5 @@ if ! `grep -qs "/mnt" /proc/mounts`; then
   sudo mount --rbind /tmp /mnt/tmp
   sudo cp -L /etc/resolv.conf /mnt/etc
 else
-  printf "/dev/sdb1 is mounted on /mnt\n"
+  printf "/dev/sdb3 is mounted on /mnt\n"
 fi
