@@ -4,14 +4,24 @@ function update {
 
 alias zypup=update
 
-function zypin {
+function zin {
 	zypper in $@
 }
 
-function zyprm {
+function ziny {
+	zypper in -y "$@"
+}
+
+function zrm {
 	zypper rm $@
+}
+
+function zrmy {
+	zypper rm -y "$@"
 }
 
 function dup {
 	zypper dup
 }
+
+alias zd=dup
