@@ -1,5 +1,5 @@
 function update {
-	zypper up -y && su - fusion809 -c "apm update"
+	zypper refresh && zypper up -y && su - fusion809 -c "apm update"
 }
 
 alias zypup=update
