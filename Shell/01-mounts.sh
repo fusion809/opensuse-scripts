@@ -1,6 +1,6 @@
 # Mount Fedora
 if ! `grep -qs "/mnt" /proc/mounts`; then
-  sudo mount /dev/sdb3 /mnt
+  sudo mount /dev/fedora/root /mnt
   sudo mount -t proc proc /mnt/proc
   sudo mount --rbind /dev /mnt/dev
   sudo mount --make-rslave /mnt/dev
