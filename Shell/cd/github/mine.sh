@@ -1,3 +1,7 @@
+if ! [[ -d $GHUBM ]]; then
+	mkdir -p $GHUBM
+fi
+
 function cdgm {
 	cd $GHUBM/$1
 }

@@ -1,13 +1,14 @@
 # Install software from binary packages in available repos
 # Alternatively a URL to the RPM binary can be used as an input
 function zypin {
-  sudo zypper in -y $@
+	sudo zypper in -y $@
 }
 alias szpi=zypin
+alias zpi=zypin
 
 # Remove software
 function zyprm {
-  sudo zypper rm -y $@
+	sudo zypper rm -y $@
 }
 alias szpr=zyprm
 alias zpr=zyprm
@@ -18,14 +19,14 @@ alias zpr=zyprm
 # second input is a name for the repo, e.g., I used home:Bumblebee-Project:nVidia:310.40 for the
 # aforementioned example.
 function zyprp {
-  sudo zypper ar -f $1 $2
+	sudo zypper ar -f $1 $2
 }
 
 alias zprp=zyprp
 
 # Install software from src.rpm packages in available repos
 function zypsi {
-  sudo zypper si $@
+	sudo zypper si $@
 }
 
 alias zpsi=zypsi

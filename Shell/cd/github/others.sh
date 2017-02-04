@@ -1,3 +1,7 @@
+if ! [[ -d $GHUBO ]]; then
+	mkdir -p $GHUBO
+fi
+
 function cdgo {
 	cd $GHUBO/$1
 }

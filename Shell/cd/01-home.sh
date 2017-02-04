@@ -1,6 +1,18 @@
+if ! [[ -f /usr/bin/git ]]; then
+	zpin git
+fi
+
+if ! [[ -d $HOME/Documents ]]; then
+	mkdir -p $HOME/Documents
+fi
+
 function cdd {
 	cd $HOME/Documents/$1
 }
+
+if ! [[ -d $HOME/Documents/CodeLite/CPP-Math-Projects ]]; then
+	git clone fusion809/CPP-Math-Projects $HOME/Documents/CodeLite/CPP-Math-Projects
+fi
 
 function cdcfe {
 	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
