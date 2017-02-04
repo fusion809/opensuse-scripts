@@ -1,8 +1,10 @@
-function update {
-	zypper refresh && zypper up -y && su - fusion809 -c "apm update"
+function zypup {
+	zypper refresh && zypper up -y --auto-agree-with-licenses
 }
 
-alias zypup=update
+function update {
+	zypup && su - fusion809 -c "apm update --no-confirm"
+}
 
 function zin {
 	zypper in $@
