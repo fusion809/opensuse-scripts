@@ -14,6 +14,12 @@ function vgc {
 	vim gtk.css
 }
 
+function vgi {
+	vim .gitignore
+}
+
+alias vgit=vgi
+
 function vgt {
 	vim gtkrc
 }
@@ -21,6 +27,8 @@ function vgt {
 function vix {
 	vim index.theme
 }
+
+alias vth=vix
 
 function vmk {
 	vim Makefile
