@@ -20,7 +20,7 @@ fi
 # https://help.github.com/articles/generating-ssh-keys/
 
 if ! `which keychain > /dev/null 2>&1`; then
-  zpin keychain
+  zpi keychain
 fi
 
 eval `keychain -q --eval id_rsa`
