@@ -26,6 +26,9 @@ function ovimup {
       sed -i -e "s|$vim_baseversion|$baseversion|g" PKGBUILD
     fi
     sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
+    if [[ "$1" == "vim" ]]; then
+      sed -i -e "s|$vim_baseversion|$baseversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
+    fi
   fi
   if [[ $patchversion != $vim_patchversion ]]; then
     sed -i -e "s|patchlevel $vim_patchversion|patchlevel $patchversion|g" vim.spec
@@ -33,6 +36,9 @@ function ovimup {
       sed -i -e "s|$vim_patchversion|$patchversion|g" PKGBUILD
     fi
     sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
+    if [[ "$1" == "vim" ]]; then
+      sed -i -e "s|$vim_patchversion|$patchversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
+    fi
   fi
 
   if [[ $baseversion != $vim_baseversion ]] || [[ $patchversion != $vim_patchversion ]]; then
