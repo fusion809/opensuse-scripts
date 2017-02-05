@@ -39,7 +39,7 @@ function ovimup {
     if [[ "$1" == "vim" ]]; then
       sed -i -e "s|$vim_patchversion|$patchversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
       cd $HOME/AUR/gvim-gtk2
-      push "Bumping to $vim_baseversion.$vim_patchversion"
+      push "Bumping to $pkgver"
       cd -
     fi
   fi
