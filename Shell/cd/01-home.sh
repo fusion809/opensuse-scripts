@@ -6,6 +6,10 @@ if ! [[ -d $HOME/AUR ]]; then
 	mkdir -p $HOME/AUR
 fi
 
+function cda {
+	cd $HOME/AUR/$1
+}
+
 if ! [[ -d $HOME/Documents ]]; then
 	mkdir -p $HOME/Documents
 fi

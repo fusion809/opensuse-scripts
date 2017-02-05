@@ -61,7 +61,7 @@ function obf {
   if [[ -n $1 ]]; then
     cd $HOME/OBS/home:fusion809/$1
   fi
-  osc build Fedora_${FEDORA_VERSION} --no-verify "$2"
+  osc build Fedora_25 --no-verify "$2"
   if [[ -n $1 ]]; then
     cd -
   fi
