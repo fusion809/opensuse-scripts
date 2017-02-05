@@ -8,7 +8,4 @@ function update {
 	printf '\e[1;34m%-0s\e[m' "Updating Atom packages and themes..."
 	printf "\n"
 	apmup
-	printf '\e[1;34m%-0s\e[m' "Updating Arch Linux packages..."
-	printf "\n"
-  archup
 }
