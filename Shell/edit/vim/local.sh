@@ -26,6 +26,14 @@ function vmk {
 	vim Makefile
 }
 
+function vpk {
+	if [[ -f PKGBUILD ]]; then
+		vim PKGBUILD
+	else
+		vim package.json
+	fi
+}
+
 function vrm {
 	vim README.md
 }
