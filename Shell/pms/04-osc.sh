@@ -38,6 +38,9 @@ function ovimup {
     sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
     if [[ "$1" == "vim" ]]; then
       sed -i -e "s|$vim_patchversion|$patchversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
+      cd $HOME/AUR/gvim-gtk2
+      push "Bumping to $vim_baseversion.$vim_patchversion"
+      cd -
     fi
   fi
 
