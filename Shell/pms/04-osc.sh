@@ -41,6 +41,7 @@ function ovimup {
       cd $HOME/AUR/gvim-gtk2
       push "Bumping to $pkgver"
       cd -
+      vimaup
     fi
   fi
 
@@ -53,7 +54,6 @@ function vimup {
   ovimup vim
   ovimup "vim-suse"
   ovimup "vim-redhat"
-  vimaup
 }
 
 function obf25 {
