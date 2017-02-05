@@ -1,22 +1,4 @@
-# PATH
-export PATH="/usr/bin:/bin:/usr/bin/X11:/usr/games:/sbin:/usr/sbin:/usr/local/sbin:/usr/local/bin"
-# $GHUB
-export GHUB=$HOME/GitHub
-# $GHUB/mine
-export GHUBM=$GHUB/mine
-# $GHUB/others
-export GHUBO=$GHUB/others
-# $GHUBM/editors
-export EDT=$GHUBM/editors
-# $GHUB/mine/packaging
-export PKG=$GHUBM/packaging
-# -PKGBUILDs
-export PK=$PKG/PKGBUILDs
-# $GHUB/mine/scripts
-export SCR=$GHUBM/scripts
-# -opensuse-scripts
-export OS=$SCR/opensuse-scripts
-# $GHUBM/websites
-export WEB=$GHUBM/websites
-# -fusion809.github.io
-export FGI=$WEB/fusion809.github.io
+for i in $HOME/Shell/variables/*.sh
+do
+  . "$i"
+done
