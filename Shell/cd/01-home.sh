@@ -2,6 +2,10 @@ if ! [[ -f /usr/bin/git ]]; then
 	zpin git
 fi
 
+if ! [[ -d $HOME/AUR ]]; then
+	mkdir -p $HOME/AUR
+fi
+
 if ! [[ -d $HOME/Documents ]]; then
 	mkdir -p $HOME/Documents
 fi
@@ -18,6 +22,10 @@ function cdcfe {
 	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
 }
 
+if ! [[ -d $HOME/Downloads ]]; then
+	mkdir -p $HOME/Downloads
+fi
+
 function cddo {
 	cd $HOME/Downloads/$1
 }
@@ -25,6 +33,10 @@ function cddo {
 function cdm {
 	cd $HOME/Music/$1
 }
+
+if ! [[ -d $HOME/Programs ]]; then
+	mkdir -p $HOME/Programs
+fi
 
 function cdp {
 	cd $HOME/Programs/$1
@@ -41,6 +53,14 @@ function cdpd {
 function cdpa {
 	cdp "AppImages/$1"
 }
+
+if ! [[ -f /usr/bin/rpmdev-setuptree ]]; then
+	zpin rpmdevtools
+fi
+
+if ! [[ -d $HOME/rpmbuild ]]; then
+	rpmdev-setuptree
+fi
 
 function cdrpm {
 	cd $HOME/rpmbuild/$1
