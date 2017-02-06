@@ -22,9 +22,7 @@ function ovimup {
   vim_patchversion=$(cat vim.spec | grep "%define.*patchlevel" | sed 's/%define.*patchlevel\s*//g' | head -n 1)
   if [[ $baseversion != $vim_baseversion ]]; then
     sed -i -e "s|baseversion $vim_baseversion|baseversion $baseversion|g" vim.spec
-    if [[ -f PKGBUILD ]]; then
-      sed -i -e "s|$vim_baseversion|$baseversion|g" PKGBUILD
-    fi
+    sed -i -e "s|$vim_baseversion|$baseversion|g" {$HOME/AUR/gvim-gtk2/PKGBUILD,$HOME/OBS/home:fusion809/gvim-gtk2/PKGBUILD}
     sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
     if [[ "$1" == "vim" ]]; then
       sed -i -e "s|$vim_baseversion|$baseversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
@@ -38,8 +36,12 @@ function ovimup {
     sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
     if [[ "$1" == "vim" ]]; then
       sed -i -e "s|$vim_patchversion|$patchversion|g" $HOME/AUR/gvim-gtk2/PKGBUILD
+      sed -i -e "s|$vim_patchversion|$patchversion|g" $HOME/OBS/home:fusion809/gvim-gtk2/PKGBUILD
       cd $HOME/AUR/gvim-gtk2
       push "Bumping to $pkgver"
+      cd -
+      cd $HOME/OBS/home:fusion809/gvim-gtk2
+      osc ci -m "Bumping to $pkgver"
       cd -
       vimaup
     fi
