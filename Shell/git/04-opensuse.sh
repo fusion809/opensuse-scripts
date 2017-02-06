@@ -1,5 +1,7 @@
 ## Update local opensuse-scripts repo
 
+export OS=$SCR/opensuse-scripts
+
 function cps {
 	sudo rm -rf $OS/Shell $OS/root/Shell
 	mkdir -p $OS/Shell
