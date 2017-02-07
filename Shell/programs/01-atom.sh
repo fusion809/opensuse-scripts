@@ -17,6 +17,10 @@ if [[ -n $ATOM_INSTALLED_VERSION ]] && ! `is-at-least $ATOM_LATEST_VERSION ${ATO
   fi
 fi
 
+if ! [[ -f /usr/bin/atom ]]; then
+	atom-install
+fi
+
 # Blog
 function edblog {
 	atom $HOME/GitHub/fusion809.github.io
