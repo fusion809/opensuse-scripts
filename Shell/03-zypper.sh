@@ -1,7 +1,7 @@
 # Install software from binary packages in available repos
 # Alternatively a URL to the RPM binary can be used as an input
 function zypin {
-	sudo zypper in -y $@
+	sudo zypper in -y -l $@
 }
 alias szpi=zypin
 alias zpi=zypin
@@ -33,7 +33,8 @@ alias zpsi=zypsi
 
 # Update all software on one's system
 function zypup {
-	sudo zypper refresh && sudo zypper up -y --auto-agree-with-licenses
+	sudo zypper refresh
+	sudo zypper up -y --auto-agree-with-licenses
 }
 
 alias zpup=zypup
@@ -41,7 +42,8 @@ alias zup=zypup
 
 # Dist upgrade
 function zypdup {
-	sudo zypper refresh && sudo zypper dup
+	sudo zypper refresh
+	sudo zypper dup -l
 }
 
 alias dup=zypdup
@@ -55,7 +57,8 @@ alias zprr=zyprr
 
 # Add repository
 function zypar {
-	sudo zypper ar -f $@
+	sudo zypper ar "$@"
+	sudo zypper refresh
 }
 
 alias zpar=zypar
@@ -65,3 +68,8 @@ function zyps {
 }
 
 alias zps=zyps
+
+if ! `zypper lr | grep "home_fusion809" >/dev/null 2>&1`; then
+	zypar http://download.opensuse.org/repositories/home:fusion809/openSUSE_Tumbleweed/home:fusion809.repo
+	dup
+fi

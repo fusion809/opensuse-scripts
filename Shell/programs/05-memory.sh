@@ -1,5 +1,9 @@
+if ! [[ -f /usr/bin/ps_mem ]]; then
+	zypin ps_mem
+fi
+
 function ps_ap {
-  ps_mem $(ps_find $@)
+  sudo ps_mem -p $(ps_find $@)
 }
 
 function ps_apl {

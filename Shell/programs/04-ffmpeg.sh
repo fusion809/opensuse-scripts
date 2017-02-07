@@ -6,3 +6,7 @@ function cutffmpeg {
     ffmpeg -ss $1 -i $2 -vcodec copy -acodec copy $3
   fi
 }
+
+if ! [[ -f /usr/bin/ffmpeg ]]; then
+	zypin ffmpeg
+fi
