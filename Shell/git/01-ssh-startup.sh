@@ -15,6 +15,9 @@ then
   git config --global user.email "brentonhorne77@gmail.com"
 fi
 
+echo -e "Host aur.archlinux.org\n  IdentityFile ~/.ssh/aur\n  User aur" | sudo tee -a $HOME/.ssh/config
+ssh-keygen -f $HOME/.ssh/aur
+
 # start the ssh-agent
 # Remember, for this to work you need your SSH keys setup
 # https://help.github.com/articles/generating-ssh-keys/
