@@ -10,12 +10,12 @@ fi
 
 # openSUSE command-line client
 if ! [[ -f /usr/bin/osc ]]; then
-	zpi -y osc
+	zpi osc
 fi
 
 # rpmbuild and rpmdevtools
 if ! [[ -f /usr/bin/rpmbuild ]]; then
-	zpi rpmbuild rpmdevtools
+	zpi rpm-build
 fi
 
 # xclip
