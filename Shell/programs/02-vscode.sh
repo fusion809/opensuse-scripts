@@ -11,7 +11,7 @@ autoload is-at-least
 
 function vscode-install {
   curl -L $VSCODE_URL > /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
-  szpi /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
+  rpm -i /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
 }
 
 if ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION}`; then

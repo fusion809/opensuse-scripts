@@ -9,7 +9,7 @@ autoload is-at-least
 
 function messengerfordesktop-install {
   # printf "${MESSENGER_LATEST_VERSION}" >> $HOME/.local/share/messengerfordesktop-${MESSENGER_LATEST_VERSION} is in case the Atom package is broken like Atom 1.12.8
-  sudo zypper in -y https://github.com/Aluxian/Messenger-for-Desktop/releases/download/v${MESSENGER_LATEST_VERSION}/messengerfordesktop-${MESSENGER_LATEST_VERSION}-linux-x86_64.rpm || printf "${MESSENGER_LATEST_VERSION}" >> $HOME/.local/share/messengerfordesktop-${MESSENGER_LATEST_VERSION}
+  sudo rpm -i https://github.com/Aluxian/Messenger-for-Desktop/releases/download/v${MESSENGER_LATEST_VERSION}/messengerfordesktop-${MESSENGER_LATEST_VERSION}-linux-x86_64.rpm || printf "${MESSENGER_LATEST_VERSION}" >> $HOME/.local/share/messengerfordesktop-${MESSENGER_LATEST_VERSION}
 }
 
 if ! `is-at-least $MESSENGER_LATEST_VERSION ${MESSENGER_INSTALLED_VERSION:-0}`; then

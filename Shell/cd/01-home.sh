@@ -1,5 +1,5 @@
 if ! [[ -f /usr/bin/git ]]; then
-	zpin git
+	sudo zypper in -y git
 fi
 
 if ! [[ -d $HOME/AUR ]]; then
@@ -59,7 +59,7 @@ function cdpa {
 }
 
 if ! [[ -f /usr/bin/rpmdev-setuptree ]]; then
-	zpin rpmdevtools
+	sudo zypper in -y rpmdevtools
 fi
 
 if ! [[ -d $HOME/rpmbuild ]]; then
