@@ -15,7 +15,9 @@ then
   git config --global user.email "brentonhorne77@gmail.com"
 fi
 
-echo -e "Host aur.archlinux.org\n  IdentityFile ~/.ssh/aur\n  User aur" | sudo tee -a $HOME/.ssh/config
+if ! [[ -f $HOME/.ssh/config ]]; then
+	echo "Host aur.archlinux.org\n  IdentityFile ~/.ssh/aur\n  User aur" > $HOME/.ssh/config
+fi
 if ! [[ -f $HOME/.ssh/aur.pub ]]; then
 	ssh-keygen -f $HOME/.ssh/aur
 fi
