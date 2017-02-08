@@ -12,4 +12,4 @@ fi
 
 sudo cp $PKG/runescape-launcher/runescape-launcher /usr/local/bin
 sudo cp $PKG/runescape-launcher/runescape-launcher.desktop /usr/local/share/applications
-docker pull runescape-launcher:latest
+docker pull fusion809/runescape-launcher:latest
