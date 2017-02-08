@@ -16,7 +16,9 @@ then
 fi
 
 echo -e "Host aur.archlinux.org\n  IdentityFile ~/.ssh/aur\n  User aur" | sudo tee -a $HOME/.ssh/config
-ssh-keygen -f $HOME/.ssh/aur
+if ! [[ -f $HOME/.ssh/aur.pub ]]; then
+	ssh-keygen -f $HOME/.ssh/aur
+fi
 
 # start the ssh-agent
 # Remember, for this to work you need your SSH keys setup
