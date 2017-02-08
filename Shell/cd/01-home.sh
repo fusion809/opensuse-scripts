@@ -1,5 +1,5 @@
 if ! [[ -f /usr/bin/git ]]; then
-	sudo zypper in -y git
+	zpi git
 fi
 
 if ! [[ -d $HOME/AUR ]]; then
@@ -17,10 +17,6 @@ fi
 function cdd {
 	cd $HOME/Documents/$1
 }
-
-if ! [[ -d $HOME/Documents/CodeLite/CPP-Math-Projects ]]; then
-	git clone fusion809/CPP-Math-Projects $HOME/Documents/CodeLite/CPP-Math-Projects
-fi
 
 function cdcfe {
 	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
@@ -59,7 +55,7 @@ function cdpa {
 }
 
 if ! [[ -f /usr/bin/rpmdev-setuptree ]]; then
-	sudo zypper in -y rpmdevtools
+	zpi rpmdevtools
 fi
 
 if ! [[ -d $HOME/rpmbuild ]]; then

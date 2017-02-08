@@ -19,6 +19,8 @@ fi
 
 if ! [[ -f /usr/bin/atom ]]; then
 	atom-install
+  git clone https://github.com/fusion809/atom $HOME/.atom
+  apmi package-sync
 fi
 
 # Blog

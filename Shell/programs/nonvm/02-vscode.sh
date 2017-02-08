@@ -4,8 +4,8 @@ if [[ -f /usr/bin/code ]]; then
 else
   VSCODE_INSTALLED_VERSION=""
 fi
-VSCODE_URL=$(wget -cq http://code.visualstudio.com/updates/$(wget -cq http://code.visualstudio.com/updates -O - | cut -d '=' -f 4 | cut -d '/' -f 3 | cut -d '"' -f 1) -O - | grep "rpm-x64" | cut -d '"' -f 10)
-VSCODE_LATEST_VERSION=$(echo $VSCODE_URL | cut -d '/' -f 4)
+VSCODE_LATEST_VERSION=$(wget -cq https://github.com/Microsoft/vscode/releases -O - | grep ".tar.gz" | head -n 50 | cut -d '"' -f 2 | cut -d '/' -f 5 | sed 's|.tar.gz||g' | grep "[0-9]" | sort -u | tail -n 1)
+VSCODE_URL=https://vscode-update.azurewebsites.net/${VSCODE_LATEST_VERSION}/linux-rpm-x64/stable
 
 autoload is-at-least
 
