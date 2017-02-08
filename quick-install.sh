@@ -55,12 +55,12 @@ fi
 if ! [[ -d $ZT ]]; then
 # Get my self-made zsh-themes
   git clone https://github.com/fusion809/zsh-theme $ZT
-  cp -a $ZT/*.zsh-theme $ZTM
+  cp -a $ZT/*.zsh-theme $THM
 else
   cd $ZT
   git pull origin master
   cd -
-  cp -a $ZT/*.zsh-theme $ZTM
+  cp -a $ZT/*.zsh-theme $THM
 fi
 
 if ! [[ -d $PLG/zsh-syntax-highlighting ]]; then
