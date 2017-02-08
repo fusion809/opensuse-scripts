@@ -16,3 +16,12 @@ function gitsw {
 alias SSH=gitsw
 alias gitssh=gitsw
 alias gits=gitsw
+
+function gtsa {
+	for i in $HOME/GitHub/mine/*/*
+	do
+		pushd $i
+		gitsw
+		popd
+	done
+}
