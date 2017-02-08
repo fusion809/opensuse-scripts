@@ -92,3 +92,17 @@ if ! [[ -d $EDT/vim ]]; then
        git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
        wget -cq https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O $HOME/.vim/colors/molokai.vim
 fi
+
+# AppImages
+if ! [[ -d $PKG/AppImages ]]; then
+	git clone https://github.com/fusion809/AppImages $PKG/AppImages
+fi
+
+# GVim.AppImage
+if ! [[ -d $PKG/GVim.AppImage ]]; then
+	git clone https://github.com/fusion809/GVim.AppImage $PKG/GVim.AppImage
+fi
+
+if ! [[ -d $PKG/Code-OSS.AppImage ]]; then
+	git clone https://github.com/fusion809/Code-OSS.AppImage $PKG/Code-OSS.AppImage
+fi
