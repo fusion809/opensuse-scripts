@@ -3,13 +3,16 @@
 function zypin {
 	sudo zypper in -y -l $@
 }
+
 alias szpi=zypin
 alias zpi=zypin
+alias zpin=zypin
 
 # Remove software
 function zyprm {
 	sudo zypper rm -y $@
 }
+
 alias szpr=zyprm
 alias zpr=zyprm
 
