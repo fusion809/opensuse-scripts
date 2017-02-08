@@ -1,32 +1,46 @@
+#!/bin/bash
+export GHUB=$HOME/GitHub
+export GHUBM=$GHUB/mine
+export SCR=$GHUBM/scripts
+export OS=$SCR/opensuse-scripts
+export ZS=$HOME/.oh-my-zsh
+export PLG=$ZS/plugins
+export THM=$ZS/themes
+export ZT=$SCR/zsh-theme
+
 # Create GitHub directory
-if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
-  mkdir -p $HOME/GitHub/mine/scripts
+if ! [[ -d $SCR ]]; then
+	mkdir -p $SCR
 fi
+
+alias zpi=`sudo zypper in -y`
 
 # Get openssh, if not pre-installed and Zsh
 if ! `which ssh >/dev/null 2>&1`; then
-  sudo zypper in -y openssh
+	zpi openssh
 fi
 
 if ! [[ -f /bin/zsh ]]; then
-  sudo zypper in -y zsh
+	zpi zsh
 fi
 
-sudo zypper in -y git
+if ! [[ -f /usr/bin/git ]]; then
+	zpi git
+fi
 
 # Clone opensuse-scripts repo
-if ! [[ -d $HOME/GitHub/mine/scripts/opensuse-scripts ]]; then
-  git clone https://github.com/fusion809/opensuse-scripts $HOME/GitHub/mine/scripts/opensuse-scripts
-  # Copy across
-  cp -a $HOME/GitHub/mine/scripts/opensuse-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/scripts/opensuse-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/scripts/opensuse-scripts ]]; then
-  cd $HOME/GitHub/mine/scripts/opensuse-scripts
-  git pull origin master
-  cd -
-  # Copy across
-  cp -a $HOME/GitHub/mine/scripts/opensuse-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/scripts/opensuse-scripts/root/{Shell,.bashrc,.zshrc} /root/
+if ! [[ -d $OS ]]; then
+	git clone https://github.com/fusion809/opensuse-scripts $OS
+  	# Copy across
+  	cp -a $OS/{Shell,.bashrc,.zshrc} $HOME/
+  	sudo cp -a $OS/root/{Shell,.bashrc,.zshrc} /root/
+else
+  	cd $OS
+  	git pull origin master
+  	cd -
+  	# Copy across
+  	cp -a $OS/{Shell,.bashrc,.zshrc} $HOME/
+  	sudo cp -a $OS/root/{Shell,.bashrc,.zshrc} /root/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -38,24 +52,32 @@ else
   cd -
 fi
 
-if ! [[ -d $HOME/GitHub/mine/scripts/zsh-theme ]]; then
+if ! [[ -d $ZT ]]; then
 # Get my self-made zsh-themes
-  git clone https://github.com/fusion809/zsh-theme $HOME/GitHub/mine/scripts/zsh-theme
-  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  git clone https://github.com/fusion809/zsh-theme $ZT
+  cp -a $ZT/*.zsh-theme $ZTM
 else
-  cd $HOME/GitHub/mine/scripts/zsh-theme
+  cd $ZT
   git pull origin master
   cd -
-  cp -a $HOME/GitHub/mine/scripts/zsh-theme/*.zsh-theme $HOME/.oh-my-zsh/themes/
+  cp -a $ZT/*.zsh-theme $ZTM
 fi
 
-if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting ]]; then
-  # Get zsh-syntax-highlighting
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+if ! [[ -d $PLG/zsh-syntax-highlighting ]]; then
+	# Get zsh-syntax-highlighting
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting $PLG/zsh-syntax-highlighting
 fi
 
-if ! [[ -d $HOME/.oh-my-zsh/plugins/zsh-history-substring-search ]]; then
-  git clone https://github.com/zsh-users/zsh-history-substring-search $HOME/.oh-my-zsh/plugins/zsh-history-substring-search
+if ! [[ -d $PLG/zsh-history-substring-search ]]; then
+	git clone https://github.com/zsh-users/zsh-history-substring-search $PLG/zsh-history-substring-search
+fi
+
+if ! [[ -d $PKG/runescape-launcher ]]; then
+	git clone https://github.com/fusion809/runescape-launcher $PKG/runescape-launcher
+	sudo mkdir -p /usr/local/{bin,share/applications}
+	sudo cp $PKG/runescape-launcher/runescape-launcher /usr/local/bin
+	sudo cp $PKG/runescape-launcher/runescape-launcher.desktop /usr/local/share/applications
+	sudo cp $OS/usr/local/bin/* /usr/local/bin
 fi
 
 # Change default login shell to Zsh
