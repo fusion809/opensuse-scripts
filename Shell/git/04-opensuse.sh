@@ -10,6 +10,7 @@ function cps {
 	cp -a $HOME/.{bash,zsh}rc $OS/
 	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OS/root/
 	sudo chmod +x $OS/root/Shell/*.sh
+	sudo cp -a /mnt/usr/local/bin/* $OS/mnt/usr/local/bin
 }
 
 ## Update opensuse-scripts GitHub repo

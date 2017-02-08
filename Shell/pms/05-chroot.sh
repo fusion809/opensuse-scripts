@@ -1,7 +1,7 @@
 function archroot {
-  sudo chroot /mnt /usr/bin/su-fusion809
+	sudo chroot /mnt /usr/local/bin/su-fusion809
 }
 
-function yaup {
-	sudo chroot /mnt /usr/local/bin/yaup-ot
+function pacaup {
+	sudo chroot /mnt /usr/local/bin/pacaup-ot
 }
