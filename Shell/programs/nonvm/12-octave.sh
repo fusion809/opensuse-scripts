@@ -1,6 +1,6 @@
-if ! [[ -f /usr/bin/octave ]]; then
-	zpi octave
-fi
+#if ! [[ -f /usr/bin/octave ]]; then
+#	zpi octave
+#fi
 
 function octcli {
   octave --no-gui
