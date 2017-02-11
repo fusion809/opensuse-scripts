@@ -15,7 +15,7 @@ function vscode-install {
 	zpi /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
 }
 
-if ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION}`; then
+if [[ ${VSCODE_INSTALLED_VERSION} ]] && ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION}`; then
 	vscode-install
 fi
 
