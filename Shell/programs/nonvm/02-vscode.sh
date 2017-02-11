@@ -19,6 +19,6 @@ if ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION}`; then
 	vscode-install
 fi
 
-if ! [[ -f /usr/bin/code ]]; then
-	vscode-install
-fi
+#if ! [[ -f /usr/bin/code ]]; then
+#	vscode-install
+#fi
