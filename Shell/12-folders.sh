@@ -17,3 +17,14 @@ if ! [[ -L $HOME/"VirtualBox VMs" ]]; then
 	rm -rf $HOME/"VirtualBox VMs"
 	sudo ln -sf /data/"VirtualBox VMs" $HOME/"VirtualBox VMs"
 fi
+
+if ! [[ -d $HOME/.themes/macOS-Arc-White ]]; then
+	mkdir -p $HOME/.themes
+	git clone https://github.com/fusion809/macOS-Arc-White $HOME/.themes/macOS-Arc-White
+fi
+
+if ! [[ -d $HOME/.local/share/icons/MacBuntu-Remix ]]; then
+	mkdir -p $HOME/.local/share/icons
+	git clone https://github.com/fusion809/MacBuntu-Remix $HOME/.local/share/icons/MacBuntu-Remix
+	git clone https://github.com/fusion809/MacBuntu-OS $HOME/.local/share/icons/MacBuntu-OS
+fi
