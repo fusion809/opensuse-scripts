@@ -28,3 +28,8 @@ if ! [[ -d $HOME/.local/share/icons/MacBuntu-Remix ]]; then
 	git clone https://github.com/fusion809/MacBuntu-Remix $HOME/.local/share/icons/MacBuntu-Remix
 	git clone https://github.com/fusion809/MacBuntu-OS $HOME/.local/share/icons/MacBuntu-OS
 fi
+
+if ! [[ -L $HOME/Programs/rpm ]]; then
+	mkdir -p $HOME/Programs
+	sudo ln -sf /data/RPMS $HOME/Programs/rpm
+fi
