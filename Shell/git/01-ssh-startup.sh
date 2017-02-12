@@ -10,16 +10,19 @@ fi
 
 if [[ -a $HOME/.ssh/environment ]]; then
 	SSH_ENV=$HOME/.ssh/environment
+	eval `keychain -q --eval id_rsa`
 elif [[ $USER == fusion809 ]] && ! [[ -f $HOME/.ssh/id_rsa.pub ]]; then
 	ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
 	SSH_ENV=$HOME/.ssh/environment
 	git config --global user.name "fusion809"
 	git config --global user.email "brentonhorne77@gmail.com"
+	eval `keychain -q --eval id_rsa`
 elif [[ -n $EMAIL ]] && ! [[ -f $HOME/.ssh/id_rsa.pub ]]; then
 	ssh-keygen -t rsa -b 4096 -C "$EMAIL"
 	SSH_ENV=$HOME/.ssh/environment
 	git config --global user.name "$USER"
 	git config --global user.email "$EMAIL"
+	eval `keychain -q --eval id_rsa`
 else
 	printf "Extra data is required to set up SSH locally to automatically authenticate your GitHub commits. Add an EMAIL= field to your local $HOME/.gitconfig.sh file in order to fix this.\n"
 fi
@@ -46,5 +49,4 @@ else
 	printf "Add an AUR=true line to your $HOME/.gitconfig.sh file in order to set up SSH to authenticate AUR commits.\n"
 fi
 
-eval `keychain -q --eval id_rsa`
 #############################################################
