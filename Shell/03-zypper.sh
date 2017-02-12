@@ -7,6 +7,7 @@ function zypin {
 alias szpi=zypin
 alias zpi=zypin
 alias zpin=zypin
+alias zin=zypin
 
 # Remove software
 function zyprm {
@@ -15,6 +16,8 @@ function zyprm {
 
 alias szpr=zyprm
 alias zpr=zyprm
+alias zr=zyprm
+alias zrm=zyprm
 
 # Add zypper repo.
 # First input is the URL to the repo, e.g.,
@@ -26,6 +29,7 @@ function zyprp {
 }
 
 alias zprp=zyprp
+alias zrp=zyprp
 
 # Install software from src.rpm packages in available repos
 function zypsi {
@@ -33,6 +37,7 @@ function zypsi {
 }
 
 alias zpsi=zypsi
+alias zsi=zypsi
 
 # Update all software on one's system
 function zypup {
@@ -50,6 +55,7 @@ function zypdup {
 }
 
 alias dup=zypdup
+alias zdup=zypdup
 
 # Remove repository
 function zyprr {
@@ -57,6 +63,7 @@ function zyprr {
 }
 
 alias zprr=zyprr
+alias zrr=zyprr
 
 # Add repository
 function zypar {
@@ -65,12 +72,14 @@ function zypar {
 }
 
 alias zpar=zypar
+alias zar=zypar
 
 function zyps {
 	zypper se "$@"
 }
 
 alias zps=zyps
+alias zs=zyps
 
 if ! `zypper lr | grep "home_fusion809" >/dev/null 2>&1`; then
 	zypar http://download.opensuse.org/repositories/home:fusion809/openSUSE_Tumbleweed/home:fusion809.repo
