@@ -21,7 +21,7 @@ elif [[ -n $EMAIL ]] && ! [[ -f $HOME/.ssh/id_rsa.pub ]]; then
 	git config --global user.name "$USER"
 	git config --global user.email "$EMAIL"
 else
-	printf "Extra data is required to set up SSH locally to automatically authenticate your git commits. Add an EMAIL= field to your local $HOME/.gitconfig.sh file in order to fix this.\n"
+	printf "Extra data is required to set up SSH locally to automatically authenticate your GitHub commits. Add an EMAIL= field to your local $HOME/.gitconfig.sh file in order to fix this.\n"
 fi
 
 if [[ $USER == "fusion809" ]] || [[ $AUR == "true" ]]; then
