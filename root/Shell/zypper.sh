@@ -32,3 +32,9 @@ function dup {
 }
 
 alias zd=dup
+
+function zrr {
+	zypper rr "$@"
+}
+
+alias zyprr=zrr
