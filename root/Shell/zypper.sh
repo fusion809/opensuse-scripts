@@ -18,6 +18,11 @@ function zrm {
 	zypper rm $@
 }
 
+alias zpr=zrm
+alias zprm=zrm
+alias zypr=zrm
+alias zyprm=zrm
+
 function zrmy {
 	zypper rm -y "$@"
 }
