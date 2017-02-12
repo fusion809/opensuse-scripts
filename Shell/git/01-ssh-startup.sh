@@ -4,11 +4,9 @@
 #############################################################
 # Sign in with SSH at startup
 # Makes contributing to GitHub projects a lot simpler.
-if [[ -a $HOME/.ssh/environment ]]
-then
+if [[ -a $HOME/.ssh/environment ]]; then
   SSH_ENV=$HOME/.ssh/environment
-elif [[ $USER == fusion809 ]] && ! [[ -f ~/.ssh/id_rsa.pub ]]
-then
+elif [[ $USER == fusion809 ]] && ! [[ -f ~/.ssh/id_rsa.pub ]]; then
   ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
   SSH_ENV=$HOME/.ssh/environment
   git config --global user.name "fusion809"
@@ -18,6 +16,7 @@ fi
 if ! [[ -f $HOME/.ssh/config ]]; then
 	echo "Host aur.archlinux.org\n  IdentityFile ~/.ssh/aur\n  User aur" > $HOME/.ssh/config
 fi
+
 if ! [[ -f $HOME/.ssh/aur.pub ]]; then
 	ssh-keygen -f $HOME/.ssh/aur
 fi
