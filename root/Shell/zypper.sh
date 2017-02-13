@@ -2,6 +2,9 @@ function zypup {
 	zypper refresh && zypper up -y --auto-agree-with-licenses
 }
 
+alias zup=zypup
+alias zpup=zypup
+
 function update {
 	zypup && su - fusion809 -c "apm update --no-confirm"
 }
