@@ -16,6 +16,7 @@ function zyprm {
 
 alias szpr=zyprm
 alias zpr=zyprm
+alias zprm=zyprm
 alias zr=zyprm
 alias zrm=zyprm
 
