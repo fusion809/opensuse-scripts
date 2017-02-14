@@ -1,0 +1,2 @@
+#!/bin/sh
+su - fusion809 -c "export DISPLAY=:0 && /usr/bin/runescape-launcher"
