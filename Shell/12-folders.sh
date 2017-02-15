@@ -8,10 +8,6 @@ if ! [[ -L $HOME/Pictures ]]; then
 	sudo ln -sf /data/Pictures $HOME/Pictures
 fi
 
-if ! [[ -L $HOME/Textbooks ]]; then
-	sudo ln -sf /data/Textbooks $HOME/Textbooks
-fi
-
 if ! [[ -L $HOME/Videos ]]; then
 	rm -rf $HOME/Videos
 	sudo ln -sf /data/Videos $HOME/Videos
