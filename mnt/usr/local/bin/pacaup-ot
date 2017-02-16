@@ -1,2 +1,2 @@
 #!/bin/sh
-su - fusion809 -c "EDITOR=vim pacaur -Syu --noconfirm --no-edit"
+su - fusion809 -c "/usr/bin/pacaur -Syu --noconfirm --no-edit"
