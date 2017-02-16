@@ -5,10 +5,6 @@ function zypup {
 alias zup=zypup
 alias zpup=zypup
 
-function update {
-	zypup && su - fusion809 -c "apm update --no-confirm"
-}
-
 function zin {
 	zypper in $@
 }
@@ -31,10 +27,14 @@ function zrmy {
 }
 
 function dup {
-	zypper dup
+	zypper dup -l --no-allow-vendor-change
 }
 
 alias zd=dup
+
+function update {
+	dup && su - fusion809 -c "apm update --no-confirm"
+}
 
 function zrr {
 	zypper rr "$@"

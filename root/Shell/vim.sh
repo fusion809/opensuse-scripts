@@ -1,13 +1,20 @@
+function vfb {
+	vim /etc/fstab
+}
+
+alias vfs=vfb
+alias vfstab=vfb
+
+function vrc {
+	vim $HOME/.vimrc
+}
+
 function vsd {
 	vim /etc/sddm.conf
 }
 
-function vrsh {
+function vsh {
 	vim $HOME/Shell
-}
-
-function vsh { 
-	vim *.sh
 }
 
 function vzp {

@@ -1,16 +1,16 @@
 ## Update local opensuse-scripts repo
 
-export OS=$SCR/opensuse-scripts
+export OSC=$SCR/opensuse-scripts
 
 function cps {
-	sudo rm -rf $OS/Shell $OS/root/Shell
-	mkdir -p $OS/Shell
+	sudo rm -rf $OSC/Shell $OSC/root/Shell
+	mkdir -p $OSC/Shell
 	chmod +x $HOME/Shell/{*,*/*,*/*/*/*,*/*/*/*/*,*/*/*/*/*/*}.sh
-	cp -a $HOME/Shell/* $OS/Shell
-	cp -a $HOME/.{bash,zsh}rc $OS/
-	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OS/root/
-	sudo chmod +x $OS/root/Shell/*.sh
-	sudo cp -a /mnt/usr/local/bin/* $OS/mnt/usr/local/bin
+	cp -a $HOME/Shell/* $OSC/Shell
+	cp -a $HOME/.{bash,zsh}rc $OSC/
+	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OSC/root/
+	sudo chmod +x $OSC/root/Shell/*.sh
+	sudo cp -a /mnt/usr/local/bin/* $OSC/mnt/usr/local/bin
 }
 
 ## Update opensuse-scripts GitHub repo
