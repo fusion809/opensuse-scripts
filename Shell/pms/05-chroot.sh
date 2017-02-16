@@ -5,3 +5,7 @@ function archroot {
 function pacaup {
 	sudo chroot /mnt /usr/local/bin/pacaup-ot
 }
+
+function pacup {
+	sudo chroot /mnt /usr/local/bin/pacupot
+}
