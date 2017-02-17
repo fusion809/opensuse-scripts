@@ -17,3 +17,7 @@ function cdd {
 function cdm {
 	cd "/etc/xdg/menus/$1"
 }
+
+function cdvi {
+	cd /home/fusion809/"VirtualBox VMs"/ISOs
+}
