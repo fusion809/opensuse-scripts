@@ -9,3 +9,7 @@ function pacaup {
 function pacup {
 	sudo chroot /mnt /usr/local/bin/pacupot
 }
+
+function aptup {
+	sudo chroot /mnt /usr/local/bin/aptup
+}
