@@ -2,13 +2,10 @@ function gitc {
 	git clone https://github.com/fusion809/$1 $2
 }
 
-if ! [[ -d $CFE ]]; then
-	gitc CPP-Math-Projects $CFE
-fi
-
 # GHUBM/editors
 # vim
-if ! [[ -d $EDT/vim ]]; then
+if ! `cat /proc/cpuinfo | grep hypervisor >/dev/null 2>&1`; then
+	if ! [[ -d $EDT/vim ]]; then
        git clone https://github.com/fusion809/vim $EDT/vim
        mkdir -p $HOME/.vim/{autoload,bundle,colors,plugins,spell,syntax}
        cp $EDT/vim/.vimrc $HOME
@@ -17,45 +14,28 @@ if ! [[ -d $EDT/vim ]]; then
        curl -LSso $HOME/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
        git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
        wget -cq https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim -O $HOME/.vim/colors/molokai.vim
-fi
-
-# GHUBM/packaging
-# AppImages
-if ! [[ -d $PKG/AppImages ]]; then
-	git clone https://github.com/fusion809/AppImages $PKG/AppImages
-fi
-
-# Code-OSS.AppImage
-if ! [[ -d $PKG/Code-OSS.AppImage ]]; then
-	git clone https://github.com/fusion809/Code-OSS.AppImage $PKG/Code-OSS.AppImage
-fi
-
-# GVim.AppImage
-if ! [[ -d $PKG/GVim.AppImage ]]; then
-	git clone https://github.com/fusion809/GVim.AppImage $PKG/GVim.AppImage
-fi
-
-# GHUBM/scripts/debian-scripts
-if ! [[ -d $DS ]]; then
-  	gitc debian-scripts $DS
-fi
-
-# GHUBM/scripts/fedora-scripts
-if ! [[ -d $FS ]]; then
-  	gitc fedora-scripts $FS
-fi
-
-# GHUBM/scripts/JScripts
-if ! [[ -d $JS ]]; then
-  	gitc JScripts $JS
-fi
-
-# GHUBM/scripts/python-scripts
-if ! [[ -d $PY ]]; then
-	gitc python-scripts $PY
-fi
-
-# GHUBM/websites/fusion809.github.io
-if ! [[ -d $FGI ]]; then
-	gitc fusion809.github.io $FGI
+	fi
+else
+	function sym {
+		if [[ -d $HOME/$1 ]]; then
+			rm -rf $HOME/$1
+		elif [[ -f $HOME/$1 ]]; then
+			rm $HOME/$1
+		fi
+		ln -sf /data/$1 $HOME/$1
+	}
+	sym ".config"
+	sym ".local"
+	sym ".vim"
+	sym ".atom"
+	sym ".vimrc"
+	sym ".zsh_history"
+	sym "Documents"
+	sym "GitHub"
+	sym "Music"
+	sym "OBS"
+	sym "Pictures"
+	sym "Shell"
+	sym "Videos"
+	sym "VirtualBox VMs"
 fi
