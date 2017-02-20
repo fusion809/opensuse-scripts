@@ -1,7 +1,7 @@
 # Install software from binary packages in available repos
 # Alternatively a URL to the RPM binary can be used as an input
 function zypin {
-	sudo zypper in -y -l $@
+	sudo zypper --no-gpg-checks in -y -l $@
 }
 
 alias szpi=zypin
