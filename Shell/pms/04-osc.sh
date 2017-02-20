@@ -1,6 +1,6 @@
 # Installing OSC
 if ! [[ -f /usr/bin/osc ]]; then
-	zypin osc
+	zpi osc
 fi
 
 function oscb {
