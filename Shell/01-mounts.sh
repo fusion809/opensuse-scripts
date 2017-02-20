@@ -16,6 +16,10 @@ function mmanj {
 
 mmanj
 
+if ! [[ -d /data ]]; then
+	sudo mkdir -p /data
+fi
+
 if ! `grep -qs "/data" /proc/mounts`; then
 	sudo mount /dev/sdb4 /data
 else
