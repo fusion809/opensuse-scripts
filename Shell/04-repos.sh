@@ -10,7 +10,7 @@ fi
 # vim
 if ! [[ -d $EDT/vim ]]; then
        git clone https://github.com/fusion809/vim $EDT/vim
-       mkdir $HOME/.vim/{autoload,bundle,colors,plugins,spell,syntax}
+       mkdir -p $HOME/.vim/{autoload,bundle,colors,plugins,spell,syntax}
        cp $EDT/vim/.vimrc $HOME
        cp $EDT/vim/*.add $HOME/.vim/spell
        cp $EDT/vim/sh.vim $HOME/.vim/syntax
