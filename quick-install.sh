@@ -13,7 +13,9 @@ if ! [[ -d $SCR ]]; then
 	mkdir -p $SCR
 fi
 
-alias zpi=`sudo zypper in -y`
+function zpi {
+	sudo zypper in -y "$@"
+}
 
 # Get openssh, if not pre-installed and Zsh
 if ! `which ssh >/dev/null 2>&1`; then
