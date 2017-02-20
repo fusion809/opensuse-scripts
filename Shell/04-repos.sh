@@ -25,7 +25,6 @@ else
 		ln -sf /data/$1 $HOME/$1
 	}
 	sym ".config"
-	sym ".local"
 	sym ".vim"
 	sym ".atom"
 	sym ".vimrc"
