@@ -4,6 +4,7 @@ export GHUBM=$GHUB/mine
 export SCR=$GHUBM/scripts
 export OS=$SCR/opensuse-scripts
 export ZS=$HOME/.oh-my-zsh
+export PKG=$GHUBM/packaging
 export PLG=$ZS/plugins
 export THM=$ZS/themes
 export ZT=$SCR/zsh-theme
