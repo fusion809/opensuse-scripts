@@ -8,5 +8,5 @@ function cutffmpeg {
 }
 
 if ! [[ -f /usr/bin/ffmpeg ]]; then
-	zpi ffmpeg
+	zpi ffmpeg ffmpegthumbs
 fi
