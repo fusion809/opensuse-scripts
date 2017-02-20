@@ -5,6 +5,7 @@ function trigger {
 }
 
 function vimaup {
+  printf '\e[1;34m%-0s\e[m' "Running vimaup.\n"
   bash <(curl -s $BASE_URL/GVim.AppImage/master/trigger.sh)
 }
 

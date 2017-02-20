@@ -62,8 +62,11 @@ function ovimup {
 }
 
 function vimup {
+  printf '\e[1;34m%-0s\e[m' "Running ovimup vim.\n"
   ovimup vim
+  printf '\e[1;34m%-0s\e[m' "Running ovimup vim-suse.\n"
   ovimup "vim-suse"
+  printf '\e[1;34m%-0s\e[m' "Running ovimup vim-redhat.\n"
   ovimup "vim-redhat"
 }
 
