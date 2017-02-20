@@ -54,6 +54,10 @@ function cdpa {
 	cdp "AppImages/$1"
 }
 
+if ! [[ -f /usr/bin/rpmdev-setuptree ]]; then
+	zpi rpmdevtools
+fi
+
 if ! [[ -d $HOME/rpmbuild ]]; then
 	rpmdev-setuptree
 fi
