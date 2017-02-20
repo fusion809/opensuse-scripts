@@ -22,6 +22,10 @@ elif [[ -n $EMAIL ]] && ! [[ -f $HOME/.ssh/id_rsa.pub ]]; then
 	git config --global user.email "$EMAIL"
 fi
 
+if ! `which keychain > /dev/null 2>&1`; then
+  zpi keychain
+fi
+
 # Start agent
 eval `keychain -q --eval id_rsa`
 
@@ -38,10 +42,6 @@ if [[ $USER == "fusion809" ]] || [[ $AUR == "true" ]]; then
 	# start the ssh-agent
 	# Remember, for this to work you need your SSH keys setup
 	# https://help.github.com/articles/generating-ssh-keys/
-
-	if ! `which keychain > /dev/null 2>&1`; then
-	  zpi keychain
-	fi
 
 	eval `keychain -q --eval aur`
 else
