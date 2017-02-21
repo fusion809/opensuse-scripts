@@ -84,6 +84,10 @@ function cdvs {
 	cd $HOME/Videos/SO
 }
 
+function cdvy {
+	cdv "YouTube/$1"
+}
+
 if ! [[ -d $HOME/"VirtualBox VMs" ]]; then
 	mkdir -p $HOME/"VirtualBox VMs"
 fi
