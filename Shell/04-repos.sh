@@ -27,6 +27,7 @@ else
 	sym ".config"
 	sym ".vim"
 	sym ".atom"
+	# Remember you need to chroot into this partition and ln -sf /data/.local $HOME/.local!
 	sym ".vimrc"
 	sym ".zsh_history"
 	sym "Documents"

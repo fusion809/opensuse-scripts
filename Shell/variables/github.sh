@@ -5,43 +5,43 @@ export GHUBM=$GHUB/mine
 # GHUBO
 export GHUBO=$GHUB/others
 if ! [[ -d $GHUBO ]]; then
-  mkdir -p $GHUBO
+	mkdir -p $GHUBO
 fi
 
 # EDT
 export EDT=$GHUBM/editors
 if ! [[ -d $EDT ]]; then
-  mkdir -p $EDT
+	mkdir -p $EDT
 fi
 
 # SCR
 export SCR=$GHUBM/scripts
 if ! [[ -d $SCR ]]; then
-  mkdir -p $SCR
+	mkdir -p $SCR
 fi
 
 # PKG
 export PKG=$GHUBM/packaging
 if ! [[ -d $PKG ]]; then
-  mkdir -p $PKG
+	mkdir -p $PKG
 fi
 
 # WEB
 export WEB=$GHUBM/websites
 if ! [[ -d $WEB ]]; then
-  mkdir -p $WEB
+	mkdir -p $WEB
 fi
 
 # ATO
 export ATO=$GHUBM/atom
 if ! [[ -d $ATO ]]; then
-  mkdir -p $ATO
+	mkdir -p $ATO
 fi
 
 # INS
 export INS=$GHUBM/installers
 if ! [[ -d $INS ]]; then
-  mkdir -p $INS
+	mkdir -p $INS
 fi
 
 # DS

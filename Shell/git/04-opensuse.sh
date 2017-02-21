@@ -5,7 +5,7 @@ export OSC=$SCR/opensuse-scripts
 function cps {
 	sudo rm -rf $OSC/Shell $OSC/root/Shell
 	mkdir -p $OSC/Shell
-	chmod +x $HOME/Shell/{*,*/*,*/*/*/*,*/*/*/*/*,*/*/*/*/*/*}.sh
+	chmod +x -R $HOME/Shell
 	cp -a $HOME/Shell/* $OSC/Shell
 	cp -a $HOME/.{bash,zsh}rc $OSC/
 	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OSC/root/
