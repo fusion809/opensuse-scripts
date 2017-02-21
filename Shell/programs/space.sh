@@ -1,3 +1,0 @@
-function space {
-	df -h /
-}
