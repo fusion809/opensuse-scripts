@@ -17,4 +17,4 @@ if [[ "$ZLD" == "package zlib-devel is not installed" ]]; then
 	zpi zlib-devel
 fi
 
-bundle install
+bundle install --quiet
