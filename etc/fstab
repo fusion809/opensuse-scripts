@@ -1,0 +1,4 @@
+/dev/sda2                                 /                    ext4       acl,user_xattr        1 1
+/dev/sda1                                 /boot/efi            vfat       umask=0002,utf8=true  0 0
+/dev/sdb2                                 /mnt                 ext4       acl,user_xattr        1 1
+/dev/sdb4                                 /data                ext4       acl,user_xattr        1 1
