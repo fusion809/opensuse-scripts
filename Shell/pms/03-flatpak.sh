@@ -1,16 +1,16 @@
 function flatup {
-  if [[ -f /usr/bin/flatpak ]]; then
-  	flatpak update "$@"
-  else
-	printf "Flatpak ain't installed mate\n"
-
-  fi
+	if [[ -f /usr/bin/flatpak ]]; then
+		flatpak update "$@"
+	else
+		printf '\e[1;31m%-0s\e[m' "Flatpak ain't installed mate"
+		printf "\n"
+	fi
 }
 
 function flatin {
-  flatpak install "$@"
+	flatpak install "$@"
 }
 
 function flatrm {
-  flatpak uninstall "$@"
+	flatpak uninstall "$@"
 }
