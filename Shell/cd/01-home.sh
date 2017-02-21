@@ -77,7 +77,7 @@ function cdsh {
 }
 
 function cdv {
-	cd $HOME/Videos
+	cd $HOME/Videos/$1
 }
 
 function cdvs {
