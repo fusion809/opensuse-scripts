@@ -13,4 +13,6 @@ if ! [[ -d /usr/share/doc/packages/zlib-devel ]]; then
 	zpi zlib-devel
 fi
 
-bundle install --quiet
+if ! `bundle show | grep jekyll > /dev/null 2>&1`; then
+	bundle install --quiet
+fi
