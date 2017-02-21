@@ -1,13 +1,13 @@
-#if ! [[ -f /usr/bin/octave ]]; then
-#	zpi octave
-#fi
+if ! [[ -f /usr/bin/octave ]]; then
+	zpi octave
+fi
 
 function octcli {
-  octave --no-gui
+	octave --no-gui
 }
 
 function octe {
-  octave --eval "$@"
+	octave --eval "$@"
 }
 
 function e {
@@ -15,17 +15,17 @@ function e {
 }
 
 function ctof {
-  octe "32+1.8*$1"
+	octe "32+1.8*$1"
 }
 
 function ftoc {
-  octe "($1-32)/1.8"
+	octe "($1-32)/1.8"
 }
 
 function kgtolb {
-  octe "2.20462*$1"
+	octe "2.20462*$1"
 }
 
 function lbtokg {
-  octe "$1/2.20462"
+	octe "$1/2.20462"
 }

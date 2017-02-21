@@ -1,3 +1,3 @@
 if ! [[ -f /usr/bin/VirtualBox ]]; then
-	zypin virtualbox
+	zpi virtualbox
 fi

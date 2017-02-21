@@ -1,3 +1,3 @@
 if ! [[ -f /usr/bin/vlc ]]; then
-	zypin vlc
+	zpi vlc
 fi
