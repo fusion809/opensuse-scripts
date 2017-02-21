@@ -9,6 +9,7 @@ function cps {
 	cp -a $HOME/Shell/* $OSC/Shell
 	cp -a $HOME/.{bash,zsh}rc $OSC/
 	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OSC/root/
+        sudo cp /etc/fstab $OSC/etc
 	sudo chmod +x $OSC/root/Shell/*.sh
 	sudo cp -a /mnt/usr/local/bin/* $OSC/mnt/usr/local/bin
 }
