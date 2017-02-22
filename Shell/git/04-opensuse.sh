@@ -7,7 +7,9 @@ function cps {
 	mkdir -p $OSC/Shell
 	chmod +x -R $HOME/Shell
 	cp -a $HOME/Shell/* $OSC/Shell
-	cp -a $HOME/.{bash,zsh}rc $OSC/
+	if ! [[ -f /data/.bashrc ]]; then
+		cp -a $HOME/.{bash,zsh}rc $OSC/
+	fi
 	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OSC/root/
         sudo cp /etc/fstab $OSC/etc
 	sudo chmod +x $OSC/root/Shell/*.sh

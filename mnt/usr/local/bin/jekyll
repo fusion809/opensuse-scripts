@@ -1,4 +1,0 @@
-#!/bin/bash
-pushd /home/fusion809/GitHub/mine/websites/fusion809.github.io
-bundle exec jekyll "$@"
-popd
