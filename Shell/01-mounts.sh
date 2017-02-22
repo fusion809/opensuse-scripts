@@ -16,3 +16,11 @@ mmanj
 if ! [[ -d /data ]]; then
 	sudo mkdir -p /data
 fi
+
+function disks {
+	df -h /data
+	printf "\n"
+	df -h /mnt
+	printf "\n"
+	df -h /
+}
