@@ -19,6 +19,6 @@ fi
 
 function disks {
 	df -h /
-	df -h /mnt
-	df -h /data
+	df -h /mnt | tail -n 1
+	df -h /data | tail -n 1
 }
