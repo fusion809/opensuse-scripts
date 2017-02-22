@@ -1,0 +1,3 @@
+#!/bin/sh
+xhost +
+sudo chroot /mnt /usr/local/bin/rsot
