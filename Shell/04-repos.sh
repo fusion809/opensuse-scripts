@@ -4,7 +4,7 @@ function gitc {
 
 # GHUBM/editors
 # vim
-if ! `cat /proc/cpuinfo | grep hypervisor >/dev/null 2>&1`; then
+if `cat /proc/cpuinfo | grep hypervisor >/dev/null 2>&1`; then
 	if ! [[ -d $EDT/vim ]]; then
        git clone https://github.com/fusion809/vim $EDT/vim
        mkdir -p $HOME/.vim/{autoload,bundle,colors,plugins,spell,syntax}
