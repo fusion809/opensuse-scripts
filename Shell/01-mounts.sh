@@ -18,7 +18,7 @@ if ! [[ -d /data ]]; then
 fi
 
 function disks {
-	df -h /data
-	df -h /mnt
 	df -h /
+	df -h /mnt
+	df -h /data
 }
