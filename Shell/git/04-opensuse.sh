@@ -9,6 +9,8 @@ function cps {
 	cp -a $HOME/Shell/* $OSC/Shell
 	if ! [[ -f /data/.bashrc ]]; then
 		cp -a $HOME/.{bash,zsh}rc $OSC/
+	else
+		cp -a /data/.{bash,zsh}rc $OSC/
 	fi
 	sudo cp -a /root/{Shell,.{bash,zsh}rc} $OSC/root/
         sudo cp /etc/fstab $OSC/etc
