@@ -163,12 +163,18 @@ function vms {
 	
 function datvmss {
 	vms "Arch Linux"
-
-	datvmao=$(du -sh $VM/'ArchOld')
-	datvmc=$(du -sh $VM/'CentOS 7')
-	printf '\e[1;34m%-0s\e[m' "$datvmao" 
-        printf "\n"
-
+	vms "ArchOld"
+	vms "CentOS 7"
+	vms "Debian 8"
+	vms "deepin 15.1"
+	vms "deepin 15.3"
+	vms "Fedora 24"
+	vms "Fedora 25"
+	vms "FreeBSD 10.3"
+	vms "FreeBSD 11.0"
+	vms "Gentoo Linux"
+	vms "Gentoo Linux (multilib)"
+	vms "ISOs"
 }
 
 function space {
