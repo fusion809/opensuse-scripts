@@ -201,6 +201,62 @@ function vmsl {
 	vms "Linux Mint 18.1"
 }
 
+function vmsm {
+	vms "Mageia 5"
+}
+
+function vmsn {
+	vms "NetBSD 7.0.2"
+}
+
+function vmso {
+	vms "OpenBSD 6.0"
+}
+
+function vmsom {
+	vms "OpenMandriva 3.0"
+}
+
+function vmsos {
+	vms "openSUSE 42.2"
+}
+
+function vmsp {
+	vms "PCLinuxOS"
+}
+
+function vmsq {
+	vms "Q4OS 1.x"
+}
+
+function vmsr {
+	vms "ReactOS Nightly 20170125"
+}
+
+function vmsas {
+	vms "Sabayon Linux"
+}
+
+function vmsc {
+	vms "Screenshots"
+}
+
+function vmsls {
+	vms "Slackware Linux"
+}
+
+function vmu {
+	vms "Ubuntu 16.10"
+}
+
+function vmv {
+	vms "VDIs"
+}
+
+function vmw {
+	vms "Windows 10"
+}
+
 function datvmss {
 	vmsa
 	vmsc
@@ -212,20 +268,18 @@ function datvmss {
 	vmsg
 	vmsi
 	vmsk
-	vms "Mageia 5"
-	vms "NetBSD 7.0.2"
-	vms "OpenBSD 6.0"
-	vms "OpenMandriva 3.0"
-	vms "openSUSE 42.2"
-	vms "PCLinuxOS"
-	vms "Q4OS 1.x"
-	vms "ReactOS Nightly 20170125"
-	vms "Sabayon Linux"
-	vms "Screenshots"
-	vms "Slackware Linux"
-	vms "Ubuntu 16.10"
-	vms "VDIs"
-	vms "Windows 10"
+	vmsn
+	vmso
+	vmsom
+	vmsos
+	vmsp
+	vmsq
+	vmsr
+	vmsas
+	vmsc
+	vmu
+	vmv
+	vmw
 }
 
 function space {
