@@ -59,8 +59,14 @@ function datls {
 	printf "\n"
 }
 
-function space {
+function datms {
 	datm=$(du -sh /data/Music)
+
+	printf '\e[1;32m%-0s\e[m' "$datm"
+	printf "\n"
+}
+
+function space {
 	datp=$(du -sh /data/Pictures)
 	datr=$(du -sh /data/RPMS)
 	datsc=$(du -sh /data/*.gz)
@@ -83,5 +89,5 @@ function space {
 	datcs
 	datds
 	datgs
-
+	datms
 }
