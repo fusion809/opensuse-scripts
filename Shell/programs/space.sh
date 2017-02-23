@@ -67,7 +67,7 @@ function datms {
 }
 
 function datps {
-	datp=$(du -sh /data/Music)
+	datp=$(du -sh /data/Pictures)
 
 	printf '\e[1;36m%-0s\e[m' "$datp"
 	printf "\n"
