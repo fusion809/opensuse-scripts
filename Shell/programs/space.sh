@@ -149,7 +149,7 @@ function vms {
 	NOG=$(echo $G | cut -d 'G' -f 1)
 
 	if ! [[ -z ${G// } ]]; then
-		if [[ $NOG >= "10" ]]; then
+		if [[ "$NOG" >= "10" ]]; then
 			printf '\e[1;31m%-0s\e[m' "$JI"
 		else
 			printf '\e[1;37m%-0s\e[m' "$JI"
@@ -175,6 +175,10 @@ function datvmss {
 	vms "Gentoo Linux"
 	vms "Gentoo Linux (multilib)"
 	vms "ISOs"
+	vms "KDE Neon Unstable"
+	vms "Linux Mint 18.1"
+	vms "Mageia 5"
+	vms "
 }
 
 function space {
