@@ -35,6 +35,12 @@ else
 	sym "Music"
 	sym "OBS"
 	sym "Pictures"
+	if [[ -d $HOME/Programs/scilab-6.0.0 ]]; then
+		rm -rf $HOME/Programs/scilab-6.0.0
+	elif [[ -f $HOME/Programs/scilab-6.0.0 ]]; then
+		rm $HOME/Programs/scilab-6.0.0
+	fi
+	ln -sf /data/scilab-6.0.0 $HOME/Programs/scilab-6.0.0
 	sym "Shell"
 	sym "Videos"
 	sym "VirtualBox VMs"
