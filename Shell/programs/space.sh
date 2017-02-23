@@ -7,17 +7,18 @@ function roots {
 	printf "\n"
 	printf '\e[1;34m%-0s\e[m' "$root2"
 	printf "\n"
-
 }
 
 function mnts {
 	mnt=$(df -h /mnt | tail -n 1)
+
 	printf '\e[1;33m%-0s\e[m' "$mnt"
 	printf "\n"
 }
 
 function datas {
 	data=$(df -h /data | tail -n 1)
+
 	printf '\e[1;32m%-0s\e[m' "$data"
 	printf "\n"
 }
