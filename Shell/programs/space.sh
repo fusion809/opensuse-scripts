@@ -172,6 +172,17 @@ function datvmss {
 	vms "Mageia 5"
 	vms "NetBSD 7.0.2"
 	vms "OpenBSD 6.0"
+	vms "OpenMandriva 3.0"
+	vms "openSUSE 42.2"
+	vms "PCLinuxOS"
+	vms "Q4OS 1.x"
+	vms "ReactOS Nightly 20170125"
+	vms "Sabayon Linux"
+	vms "Screenshots"
+	vms "Slackware Linux"
+	vms "Ubuntu 16.10"
+	vms "VDIs"
+	vms "Windows 10"
 }
 
 function space {
