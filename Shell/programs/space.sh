@@ -73,9 +73,14 @@ function datps {
 	printf "\n"
 }
 
-function space {
-	datp=$(du -sh /data/Pictures)
+function datrs {
 	datr=$(du -sh /data/RPMS)
+
+	printf '\e[1;36m%-0s\e[m' "$datr"
+	printf "\n"
+}
+
+function space {
 	datsc=$(du -sh /data/*.gz)
 	datsh=$(du -sh /data/Shell)
 	datsr=$(du -sh /data/SRPMS)
@@ -99,4 +104,5 @@ function space {
 	datls
 	datms
 	datps
+	datrs
 }
