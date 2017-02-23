@@ -1,8 +1,22 @@
-function space {
+function roots {
 	root=$(df -h /)
 	root1=$(echo $root | head -n 1)
 	root2=$(echo $root | tail -n 1)
+
+	printf '\e[1;31m%-0s\e[m' "$root1"
+	printf "\n"
+	printf '\e[1;34m%-0s\e[m' "$root2"
+	printf "\n"
+
+}
+
+function mnts {
 	mnt=$(df -h /mnt | tail -n 1)
+	printf '\e[1;33m%-0s\e[m' "$mnt"
+	printf "\n"
+}
+
+function space {
 	data=$(df -h /data | tail -n 1)
 	datat=$(du -sh /data/.atom)
 	datc=$(du -sh /data/.config)
@@ -23,12 +37,8 @@ function space {
 	datvm=$(du -sh /data/"VirtualBox VMs")
 	datvms=$(du -sh /data/"VirtualBox VMs"/*)
 
-	printf '\e[1;31m%-0s\e[m' "$root1"
-	printf "\n"
-	printf '\e[1;34m%-0s\e[m' "$root2"
-	printf "\n"
-	printf '\e[1;33m%-0s\e[m' "$mnt"
-	printf "\n"
+	roots
+	mnts
 	printf '\e[1;32m%-0s\e[m' "$data"
 	printf "\n"
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
