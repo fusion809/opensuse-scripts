@@ -178,7 +178,8 @@ function datvmss {
 	vms "KDE Neon Unstable"
 	vms "Linux Mint 18.1"
 	vms "Mageia 5"
-	vms "
+	vms "NetBSD 7.0.2"
+	vms "OpenBSD 6.0"
 }
 
 function space {
