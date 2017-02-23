@@ -122,8 +122,14 @@ function datvims {
         printf "\n"
 }
 
-function space {
+function datvimrs {
 	datvimr=$(du -sh /data/.vimrc)
+
+	printf '\e[1;34m%-0s\e[m' "$datvimr" 
+        printf "\n"
+}
+
+function space {
 	datvm=$(du -sh /data/"VirtualBox VMs")
 	datvms=$(du -sh /data/"VirtualBox VMs"/*)
 
@@ -144,4 +150,6 @@ function space {
 	datsrs
 	datsus
 	datts
+	datvs
+	datvims
 }
