@@ -30,10 +30,25 @@ function datats {
 	printf "\n"
 }
 
-function space {
+function datcs {
 	datc=$(du -sh /data/.config)
+	printf '\e[1;32m%-0s\e[m' "$datc"
+	printf "\n"
+}
+
+function datds {
 	datd=$(du -sh /data/Documents)
+	printf '\e[1;34m%-0s\e[m' "$datd"
+	printf "\n"
+}
+
+function datgs {
 	datg=$(du -sh /data/GitHub)
+	printf '\e[1;33m%-0s\e[m' "$datg"
+	printf "\n"
+}
+
+function space {
 	datl=$(du -sh /data/.local)
 	datm=$(du -sh /data/Music)
 	datp=$(du -sh /data/Pictures)
@@ -55,12 +70,9 @@ function space {
 	printf "\n"
 	datas
 	datats
-	printf '\e[1;32m%-0s\e[m' "$datc"
-	printf "\n"
-	printf '\e[1;34m%-0s\e[m' "$datd"
-	printf "\n"
-	printf '\e[1;33m%-0s\e[m' "$datg"
-	printf "\n"
+	datcs
+	datds
+	datgs
 	printf '\e[1;32m%-0s\e[m' "$datl"
 	printf "\n"
 
