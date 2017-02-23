@@ -55,7 +55,7 @@ function datgs {
 function datls {
 	datl=$(du -sh /data/.local)
 
-	printf '\e[1;37m%-0s\e[m' "$datl"
+	printf '\e[1;32m%-0s\e[m' "$datl"
 	printf "\n"
 }
 
@@ -63,6 +63,13 @@ function datms {
 	datm=$(du -sh /data/Music)
 
 	printf '\e[1;37m%-0s\e[m' "$datm"
+	printf "\n"
+}
+
+function datps {
+	datp=$(du -sh /data/Music)
+
+	printf '\e[1;36m%-0s\e[m' "$datp"
 	printf "\n"
 }
 
