@@ -159,17 +159,13 @@ function vms {
 	
 function datvmss {
 	vms "Arch Linux"
-	vms "ArchOld"
 	vms "CentOS 7"
 	vms "Debian 8"
-	vms "deepin 15.1"
 	vms "deepin 15.3"
 	vms "Fedora 24"
 	vms "Fedora 25"
-	vms "FreeBSD 10.3"
 	vms "FreeBSD 11.0"
 	vms "Gentoo Linux"
-	vms "Gentoo Linux (multilib)"
 	vms "ISOs"
 	vms "KDE Neon Unstable"
 	vms "Linux Mint 18.1"
