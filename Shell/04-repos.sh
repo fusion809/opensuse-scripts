@@ -45,3 +45,5 @@ else
 	sym "Videos"
 	sym "VirtualBox VMs"
 fi
+
+cp $HOME/.config/* /data/.config
