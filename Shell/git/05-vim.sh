@@ -7,5 +7,5 @@ function cpv {
 }
 
 function shvup {
-	cpv && cdvm && push "$1" && cd -
+	cpv && cdvim && push "$1" && cd -
 }

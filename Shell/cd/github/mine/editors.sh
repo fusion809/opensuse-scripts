@@ -6,8 +6,6 @@ function cdem {
 	cded "emacs/$1"
 }
 
-function cdvm {
+function cdvim {
 	cded "vim/$1"
 }
-
-alias cdvim=cdvm

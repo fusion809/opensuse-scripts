@@ -92,8 +92,12 @@ if ! [[ -d $HOME/"VirtualBox VMs" ]]; then
 	mkdir -p $HOME/"VirtualBox VMs"
 fi
 
+function cdvm {
+	cd $HOME/"VirtualBox VMs"/$1
+} 
+
 function cdvi {
-	cd $HOME/"VirtualBox VMs"/ISOs
+	cdvm "ISOs/$1"
 }
 
 if ! [[ -d $HOME/OBS ]]; then
