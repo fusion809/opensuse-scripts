@@ -136,14 +136,39 @@ function datvms {
         printf "\n"
 }
 
-function datvmss {
-	datvmal=$(du -sh /data/"VirtualBox VMs"/'Arch Linux')
-	datvmao=$(du -sh /data/"VirtualBox VMs"/'ArchOld')
+export VM=/data/"VirtualBox VMs"
 
-	printf '\e[1;37m%-0s\e[m' "$datvmal" 
-        printf "\n"
+function vms {
+	unset $G
+	unset $JI
+	unset $SIZE
+	unset $NOG
+	JI=$(du -sh $VM/$1)
+	SIZE=$(echo $JI | cut -d '/' -f 1)
+	G=$(echo $SIZE | grep "G")
+	NOG=$(echo $G | cut -d 'G' -f 1)
+
+	if ! [[ -z ${G// } ]]; then
+		if [[ $NOG >= "10" ]]; then
+			printf '\e[1;31m%-0s\e[m' "$JI"
+		else
+			printf '\e[1;37m%-0s\e[m' "$JI"
+		fi
+	else
+		printf '\e[1;34m%-0s\e[m' "$JI"
+	fi
+
+	printf "\n"
+}
+	
+function datvmss {
+	vms "Arch Linux"
+
+	datvmao=$(du -sh $VM/'ArchOld')
+	datvmc=$(du -sh $VM/'CentOS 7')
 	printf '\e[1;34m%-0s\e[m' "$datvmao" 
         printf "\n"
+
 }
 
 function space {
