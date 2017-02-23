@@ -23,8 +23,14 @@ function datas {
 	printf "\n"
 }
 
-function space {
+function datats {
 	datat=$(du -sh /data/.atom)
+
+	printf '\e[1;36m%-0s\e[m' "$datat"
+	printf "\n"
+}
+
+function space {
 	datc=$(du -sh /data/.config)
 	datd=$(du -sh /data/Documents)
 	datg=$(du -sh /data/GitHub)
@@ -48,8 +54,7 @@ function space {
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
 	printf "\n"
 	datas
-	printf '\e[1;36m%-0s\e[m' "$datat"
-	printf "\n"
+	datats
 	printf '\e[1;32m%-0s\e[m' "$datc"
 	printf "\n"
 	printf '\e[1;34m%-0s\e[m' "$datd"
