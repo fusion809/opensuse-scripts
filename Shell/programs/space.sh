@@ -16,8 +16,13 @@ function mnts {
 	printf "\n"
 }
 
-function space {
+function datas {
 	data=$(df -h /data | tail -n 1)
+	printf '\e[1;32m%-0s\e[m' "$data"
+	printf "\n"
+}
+
+function space {
 	datat=$(du -sh /data/.atom)
 	datc=$(du -sh /data/.config)
 	datd=$(du -sh /data/Documents)
@@ -39,10 +44,9 @@ function space {
 
 	roots
 	mnts
-	printf '\e[1;32m%-0s\e[m' "$data"
-	printf "\n"
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
 	printf "\n"
+	datas
 	printf '\e[1;36m%-0s\e[m' "$datat"
 	printf "\n"
 	printf '\e[1;32m%-0s\e[m' "$datc"
