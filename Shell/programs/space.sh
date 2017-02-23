@@ -149,7 +149,7 @@ function vms {
 	NOG=$(echo $G | cut -d 'G' -f 1)
 
 	if ! [[ -z "${G// }" ]]; then
-		if (( "$NOG" > 10 )); then
+		if (( $NOG > 10 )); then
 			printf '\e[1;31m%-0s\e[m' "$JI"
 		else
 			printf '\e[1;37m%-0s\e[m' "$JI"
