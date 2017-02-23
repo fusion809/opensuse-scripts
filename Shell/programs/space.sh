@@ -118,7 +118,7 @@ function datvs {
 function datvims {
 	datvim=$(du -sh /data/.vim)
 
-	printf '\e[1;34m%-0s\e[m' "$datv" 
+	printf '\e[1;34m%-0s\e[m' "$datvim" 
         printf "\n"
 }
 
