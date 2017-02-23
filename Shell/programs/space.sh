@@ -221,8 +221,8 @@ function vmsos {
 	vms "openSUSE 42.2"
 }
 
-function vmsp {
-	vms "PCLinuxOS"
+function vmsic {
+	vms "Icaros Desktop 2.2"
 }
 
 function vmsq {
@@ -267,12 +267,12 @@ function datvmss {
 	vmsf
 	vmsg
 	vmsi
+	vmsic
 	vmsk
 	vmsn
 	vmso
 	vmsom
 	vmsos
-	vmsp
 	vmsq
 	vmsr
 	vmsas
