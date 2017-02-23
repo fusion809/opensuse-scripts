@@ -129,10 +129,21 @@ function datvimrs {
         printf "\n"
 }
 
-function space {
+function datvms {
 	datvm=$(du -sh /data/"VirtualBox VMs")
+
+	printf '\e[1;31m%-0s\e[m' "$datvm" 
+        printf "\n"
+}
+
+function datvmss {
 	datvms=$(du -sh /data/"VirtualBox VMs"/*)
 
+	printf '\e[1;31m%-0s\e[m' "$datvms" 
+        printf "\n"
+}
+
+function space {
 	roots
 	mnts
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
@@ -152,4 +163,7 @@ function space {
 	datts
 	datvs
 	datvims
+	datvimrs
+	datvms
+	datvmss
 }
