@@ -94,8 +94,14 @@ function datsrs {
         printf "\n"
 }	
 
-function space {
+function datsus {
 	datsu=$(du -sh /data/sudoers)
+
+	printf '\e[1;34m%-0s\e[m' "$datsu" 
+        printf "\n"
+}
+
+function space {
 	datt=$(du -sh /data/Textbooks)
 	datv=$(du -sh /data/Videos)
 	datvim=$(du -sh /data/.vim)
