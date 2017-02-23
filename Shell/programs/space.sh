@@ -80,9 +80,14 @@ function datrs {
 	printf "\n"
 }
 
-function space {
-	datsc=$(du -sh /data/*.gz)
+function datshs {
 	datsh=$(du -sh /data/Shell)
+
+	printf '\e[1;34m%-0s\e[m' "$datsh" 
+        printf "\n"
+}
+
+function space {
 	datsr=$(du -sh /data/SRPMS)
 	datsu=$(du -sh /data/sudoers)
 	datt=$(du -sh /data/Textbooks)
@@ -105,4 +110,5 @@ function space {
 	datms
 	datps
 	datrs
+	datshs
 }
