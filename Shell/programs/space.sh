@@ -87,8 +87,14 @@ function datshs {
         printf "\n"
 }
 
-function space {
+function datsrs {
 	datsr=$(du -sh /data/SRPMS)
+
+	printf '\e[1;34m%-0s\e[m' "$datsr" 
+        printf "\n"
+}	
+
+function space {
 	datsu=$(du -sh /data/sudoers)
 	datt=$(du -sh /data/Textbooks)
 	datv=$(du -sh /data/Videos)
