@@ -101,10 +101,28 @@ function datsus {
         printf "\n"
 }
 
-function space {
+function datts {
 	datt=$(du -sh /data/Textbooks)
+
+	printf '\e[1;34m%-0s\e[m' "$datt" 
+        printf "\n"
+}
+
+function datvs {
 	datv=$(du -sh /data/Videos)
+
+	printf '\e[1;31m%-0s\e[m' "$datv" 
+        printf "\n"
+}
+
+function datvims {
 	datvim=$(du -sh /data/.vim)
+
+	printf '\e[1;34m%-0s\e[m' "$datv" 
+        printf "\n"
+}
+
+function space {
 	datvimr=$(du -sh /data/.vimrc)
 	datvm=$(du -sh /data/"VirtualBox VMs")
 	datvms=$(du -sh /data/"VirtualBox VMs"/*)
@@ -125,4 +143,5 @@ function space {
 	datshs
 	datsrs
 	datsus
+	datts
 }
