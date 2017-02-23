@@ -39,4 +39,7 @@ function space {
 	printf "\n"
 	printf '\e[1;34m%-0s\e[m' "$datd"
 	printf "\n"
+	printf '\e[1;33m%-0s\e[m' "$datg"
+	printf "\n"
+
 }
