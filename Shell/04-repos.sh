@@ -46,4 +46,4 @@ else
 	sym "VirtualBox VMs"
 fi
 
-cp $HOME/.config/* /data/.config
+cp -ar $HOME/.config/* /data/.config
