@@ -156,19 +156,62 @@ function vms {
 
 	printf "\n"
 }
-	
-function datvmss {
+
+function vmsa {
 	vms "Arch Linux"
+}
+
+function vmsc {
 	vms "CentOS 7"
+}
+
+function vmsdb {
 	vms "Debian 8"
+}
+
+function vmsdp {
 	vms "deepin 15.3"
+}
+
+function vmsf24 {
 	vms "Fedora 24"
+}
+
+function vmsf25 {
 	vms "Fedora 25"
+}
+
+function vmsf {
 	vms "FreeBSD 11.0"
+}
+
+function vmsg {
 	vms "Gentoo Linux"
+}
+
+function vmsi {
 	vms "ISOs"
+}
+
+function vmsk {
 	vms "KDE Neon Unstable"
+}
+
+function vmsl {
 	vms "Linux Mint 18.1"
+}
+
+function datvmss {
+	vmsa
+	vmsc
+	vmsdb
+	vmsdp
+	vmsf24
+	vmsf25
+	vmsf
+	vmsg
+	vmsi
+	vmsk
 	vms "Mageia 5"
 	vms "NetBSD 7.0.2"
 	vms "OpenBSD 6.0"
