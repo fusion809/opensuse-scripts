@@ -16,9 +16,3 @@ mmanj
 if ! [[ -d /data ]]; then
 	sudo mkdir -p /data
 fi
-
-function disks {
-	df -h /
-	df -h /mnt | tail -n 1
-	df -h /data | tail -n 1
-}
