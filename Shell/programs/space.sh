@@ -137,9 +137,12 @@ function datvms {
 }
 
 function datvmss {
-	datvms=$(du -sh /data/"VirtualBox VMs"/*)
+	datvmal=$(du -sh /data/"VirtualBox VMs"/'Arch Linux')
+	datvmao=$(du -sh /data/"VirtualBox VMs"/'ArchOld')
 
-	printf '\e[1;31m%-0s\e[m' "$datvms" 
+	printf '\e[1;37m%-0s\e[m' "$datvmal" 
+        printf "\n"
+	printf '\e[1;34m%-0s\e[m' "$datvmao" 
         printf "\n"
 }
 
