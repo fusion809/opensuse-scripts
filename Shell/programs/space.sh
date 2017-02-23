@@ -139,7 +139,6 @@ function datvms {
 export VM=/data/"VirtualBox VMs"
 
 function vms {
-	unset $G
 	JI=$(du -sh $VM/$1)
 	SIZE=$(echo $JI | cut -d '/' -f 1)
 	G=$(echo $SIZE | grep "G")
