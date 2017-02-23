@@ -1,3 +1,3 @@
 if ! [[ -f /usr/bin/codeblocks ]]; then
-	zpi codeblocks codelite eclipse netbeans gnome-builder kdevelop komodo-edit geany
+	zpi bluefish codeblocks codelite eclipse geany gnome-builder kdevelop5 komodo-edit netbeans
 fi
