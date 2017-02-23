@@ -33,7 +33,7 @@ function space {
 	printf "\n"
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
 	printf "\n"
-	printf '\e[1;35m%-0s\e[m' "$datat"
+	printf '\e[1;36m%-0s\e[m' "$datat"
 	printf "\n"
 	printf '\e[1;32m%-0s\e[m' "$datc"
 	printf "\n"
