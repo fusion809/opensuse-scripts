@@ -24,7 +24,6 @@ else
 		fi
 		ln -sf /data/$1 $HOME/$1
 	}
-	sym ".config"
 	sym ".vim"
 	sym ".atom"
 	# Remember you need to chroot into this partition and ln -sf /data/.local $HOME/.local!
