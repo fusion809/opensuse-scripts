@@ -285,9 +285,9 @@ function datvmss {
 function space {
 	roots
 	mnts
+	datas
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
 	printf "\n"
-	datas
 	datats
 	datcs
 	datds
