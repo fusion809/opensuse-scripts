@@ -1,4 +1,8 @@
 #!/bin/zsh
+PS4='+ $(date "+%s.%N")\011 '
+exec 3>&2 2>/tmp/bashstart.$$.log
+set -x
+
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
