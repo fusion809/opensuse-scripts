@@ -26,8 +26,6 @@ else
 	}
 	sym ".vim"
 	sym ".atom"
-	# Remember you need to chroot into this partition and ln -sf /data/.local $HOME/.local!
-	cp -a /data/.config/* $HOME/.config
 	sym ".vimrc"
 	sym ".zsh_history"
 	sym "Documents"
@@ -44,6 +42,8 @@ else
 	sym "Shell"
 	sym "Videos"
 	sym "VirtualBox VMs"
+	
+	function cpc {
+		cp -ar $HOME/.config/* /data/.config
+	}
 fi
-
-cp -ar $HOME/.config/* /data/.config
