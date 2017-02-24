@@ -9,4 +9,5 @@ function cutffmpeg {
 
 if ! [[ -f /usr/bin/ffmpeg ]]; then
 	zpi ffmpeg ffmpegthumbs
+	sudo zypper dup --from packman
 fi
