@@ -9,9 +9,16 @@ function zin {
 	zypper in $@
 }
 
+alias zpin=zin
+alias zypin=zin
+alias zpi=zin
+
 function ziny {
 	zypper in -y "$@"
 }
+
+alias zpiny=ziny
+alias zpiy=ziny
 
 function zrm {
 	zypper rm $@
