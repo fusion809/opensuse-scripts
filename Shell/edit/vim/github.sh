@@ -47,6 +47,12 @@ function vpy {
 	popd
 }
 
+function vsc {
+	pushd $SCR/scilab-scripts
+	vim
+	popd
+}
+
 # zsh-theme repo
 # https://github.com/fusion809/zsh-theme
 function vzt {
