@@ -39,6 +39,13 @@ function vjs {
 	popd
 }
 
+# opensuse-scripts
+function vos {
+	pushd $OSC
+	vim
+	popd
+}
+
 # python-scripts repo
 # https://github.com/fusion809/python-scripts
 function vpy {
@@ -47,6 +54,7 @@ function vpy {
 	popd
 }
 
+# scilab-scripts
 function vsc {
 	pushd $SCR/scilab-scripts
 	vim

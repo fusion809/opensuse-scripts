@@ -39,6 +39,13 @@ function gvjs {
 	popd
 }
 
+# opensuse-scripts
+function gvos {
+	pushd $OSC
+	gvim
+	popd
+}
+
 # python-scripts repo
 # https://github.com/fusion809/python-scripts
 function gvpy {
@@ -47,6 +54,7 @@ function gvpy {
 	popd
 }
 
+# scilab-scripts
 function gvsc {
 	pushd $SCR/scilab-scripts
 	gvim
