@@ -286,6 +286,7 @@ function space {
 	roots
 	mnts
 	datas
+	printf "\n\n"
 	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
 	printf "\n"
 	datats
