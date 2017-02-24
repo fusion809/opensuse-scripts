@@ -1,7 +1,11 @@
 function edfs {
-  atom $FS
+	atom $FS
 }
 
 function edds {
-  atom $DS
+	atom $DS
+}
+
+function edos {
+	atom $OSC
 }
