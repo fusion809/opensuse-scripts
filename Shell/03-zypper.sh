@@ -58,6 +58,10 @@ function zypdup {
 alias dup=zypdup
 alias zdup=zypdup
 
+function dupv {
+	dup -l --no-allow-vendor-change
+}
+
 # Remove repository
 function zyprr {
 	sudo zypper rr $@
