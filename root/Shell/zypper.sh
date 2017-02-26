@@ -33,14 +33,18 @@ function zrmy {
 	zypper rm -y "$@"
 }
 
-function dup {
+function dupv {
 	zypper dup -l --no-allow-vendor-change
 }
 
-alias zd=dup
+alias zd=dupv
+
+function dup {
+	zypper dup -l
+}
 
 function update {
-	dup && su - fusion809 -c "apm update --no-confirm"
+	dupv && su - fusion809 -c "apm update --no-confirm"
 }
 
 function zrr {
