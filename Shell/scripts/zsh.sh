@@ -3,9 +3,9 @@ function szsh {
 }
 
 function zshf {
-	mv .zsh_history .zsh_history_bad
-	strings .zsh_history_bad > .zsh_history
-	fc -R .zsh_history
+	mv $HOME/.zsh_history $HOME/.zsh_history_bad
+	strings $HOME/.zsh_history_bad > $HOME/.zsh_history
+	fc -R $HOME/.zsh_history
 }
 
 function zsht {
