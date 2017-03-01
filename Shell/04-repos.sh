@@ -17,12 +17,12 @@ if `cat /proc/cpuinfo | grep hypervisor >/dev/null 2>&1`; then
 	fi
 else
 	function sym {
-		if [[ -d $HOME/$1 ]]; then
-			rm -rf $HOME/$1
+		if [[ -d "$HOME/$1" ]]; then
+			rm -rf "$HOME/$1"
 		elif [[ -f $HOME/$1 ]]; then
-			rm $HOME/$1
+			rm "$HOME/$1"
 		fi
-		ln -sf /data/$1 $HOME/$1
+		ln -sf /data/"$1" "$HOME/$1"
 	}
 	sym ".vim"
 	sym ".atom"
