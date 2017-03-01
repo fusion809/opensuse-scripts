@@ -19,7 +19,7 @@ else
 	function sym {
 		if [[ -d "$HOME/$1" ]]; then
 			rm -rf "$HOME/$1"
-		elif [[ -f $HOME/$1 ]]; then
+		elif [[ -f "$HOME/$1" ]]; then
 			rm "$HOME/$1"
 		fi
 		ln -sf /data/"$1" "$HOME/$1"
