@@ -7,12 +7,7 @@
 # /dev/sdb3 - swap partition set up for Ubuntu, but usable by OT
 # /dev/sdb4 - ext4 data partition with my backed up files
 
-if ! [[ -d /data ]]; then
-	mkdir -p /data
-fi
-
 # Set up mounts
-sudo mount /dev/sdb4 /data
 sudo mount /dev/sdb2 /mnt
 
 # Set up symlinks
@@ -20,10 +15,10 @@ ln -sf /data/GitHub $HOME/GitHub
 ln -sf /data/Shell $HOME/Shell
 ln -sf /data/.bashrc $HOME/.bashrc
 ln -sf /data/.zshrc $HOME/.zshrc
-ln -sf /data/.zsh 
+ln -sf /data/.oh-my-zsh $HOME/.oh-my-zsh
 
 function zpi {
-	sudo zypper in -y -l "$@"
+	sudo zypper --no-gpg-checks in -y -l "$@"
 }
 
 if ! [[ -f /bin/zsh ]]; then
@@ -37,6 +32,7 @@ sudo cp $OS/usr/local/bin/* /usr/local/bin
 sudo cp $OS/mnt/usr/local/bin/* /mnt/usr/local/bin
 sudo cp /etc/fstab /etc/fstab.backup
 sudo cp $OS/etc/fstab /etc/fstab
+sudo cp -a $OS/root/{Shell,.bashrc,.zshrc} /root
 
 # Set user shell to Zsh
 chsh -s /bin/zsh
