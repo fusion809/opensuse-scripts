@@ -11,8 +11,8 @@ VSCODE_URL=https://vscode-update.azurewebsites.net/${VSCODE_LATEST_VERSION}/linu
 autoload is-at-least
 
 function vscode-install {
-	curl -L $VSCODE_URL > $HOME/Programs/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
-	zpi $HOME/Programs/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
+	curl -L $VSCODE_URL > /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
+	zpi /tmp/code-${VSCODE_LATEST_VERSION}.x86_64.rpm
 }
 
 if [[ ${VSCODE_INSTALLED_VERSION} ]] && ! `is-at-least ${VSCODE_LATEST_VERSION} ${VSCODE_INSTALLED_VERSION}`; then
