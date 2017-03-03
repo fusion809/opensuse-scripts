@@ -34,13 +34,13 @@ function zrmy {
 }
 
 function dupv {
-	zypper dup -l --no-allow-vendor-change
+	zypper refresh && zypper dup -l --no-allow-vendor-change
 }
 
 alias zd=dupv
 
 function dup {
-	zypper dup -l
+	zypper refresh && zypper dup -l
 }
 
 function update {

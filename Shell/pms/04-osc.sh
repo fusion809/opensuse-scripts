@@ -43,6 +43,8 @@ function ovimup {
 		if [[ "$1" == "vim" ]]; then
 			sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk3}/PKGBUILD
 
+			sed -i -e "s|$vim_baseversion.$vim_patchversion|$pkgver|g" $HOME/OBS/home:fusion809/vim-debian/{debian.changelog,debian.dsc,_service}
+
 			cd $HOME/AUR/gvim-gtk2
 			push "Bumping to $pkgver"
 			cd -
@@ -60,6 +62,10 @@ function ovimup {
 			cd -
 
 			cd $HOME/OBS/home:fusion809/gvim-gtk2
+			osc ci -m "Bumping to $pkgver"
+			cd -
+
+			cd $HOME/OBS/home:fusion809/vim-debian
 			osc ci -m "Bumping to $pkgver"
 			cd -
 
