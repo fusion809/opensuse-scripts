@@ -46,6 +46,10 @@ function vrm {
 	vim README.md
 }
 
+function vsc {
+	vim *.dsc
+}
+
 function vsp {
 	vim *.spec
 }
