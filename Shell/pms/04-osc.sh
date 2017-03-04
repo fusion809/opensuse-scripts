@@ -41,9 +41,11 @@ function ovimup {
 		sed -i -e 's|Release:       [0-9].*|Release:       1|g' vim.spec
 
 		if [[ "$1" == "vim" ]]; then
-			sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk3}/PKGBUILD
+                        sed -i -e "s|$vim_patchversion|$patchversion|g" {$HOME/OBS/home:fusion809/gvim-gtk2,$HOME/AUR/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk2,$PKG/PKGBUILDs/gvim-gtk3}/PKGBUILD
 
-			sed -i -e "s|$vim_baseversion.$vim_patchversion|$pkgver|g" $HOME/OBS/home:fusion809/vim-debian/{debian.changelog,debian.dsc,_service}
+                        sed -i -e "s|$vim_baseversion.$vim_patchversion|$pkgver|g" $HOME/OBS/home:fusion809/vim-debian/{debian.dsc,_service}
+
+			sed -i "1s/^/vim (2:$pkgver-1) trusty; urgency=medium\n\n  * New upstream release\n\n -- Brenton Horne <brentonhorne77@gmail.com>  %a, %d %b %Y %H:%M:%S +1000\n\n/" $HOME/OBS/home:fusion809/vim-debian/debian.changelog
 
 			cd $HOME/AUR/gvim-gtk2
 			push "Bumping to $pkgver"
