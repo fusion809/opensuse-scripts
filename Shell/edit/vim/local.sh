@@ -2,8 +2,16 @@ function vc {
 	vim *.c
 }
 
+function vcl {
+	vim *.changelog
+}
+
 function vcp {
 	vim *.cpp
+}
+
+function vdsc {
+	vim *.dsc
 }
 
 function vdk {
