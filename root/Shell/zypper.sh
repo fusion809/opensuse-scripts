@@ -52,3 +52,7 @@ function zrr {
 }
 
 alias zyprr=zrr
+
+function zps {
+	zypper se "$@"
+}
