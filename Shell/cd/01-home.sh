@@ -19,7 +19,7 @@ function cdd {
 }
 
 function cdcfe {
-	cdd "CodeLite/CPP-Math-Projects/Simple-Pendulum/$1"
+	cdd "CodeLite/CPP-Math-Projects/$1"
 }
 
 if ! [[ -d $HOME/Downloads ]]; then

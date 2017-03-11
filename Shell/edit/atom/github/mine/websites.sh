@@ -1,5 +1,5 @@
 function edweb {
-  atom "$GHUBM/websites/$1"
+	atom "$GHUBM/websites/$1"
 }
 
 function edblog {
