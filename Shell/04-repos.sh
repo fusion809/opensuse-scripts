@@ -39,7 +39,6 @@ else
 		rm $HOME/Programs/scilab-6.0.0
 	fi
 	ln -sf /data/scilab-6.0.0 $HOME/Programs/scilab-6.0.0
-	sym "Shell"
 	sym "Videos"
 	sym "VirtualBox VMs"
 	
