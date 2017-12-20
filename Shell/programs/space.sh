@@ -283,27 +283,5 @@ function datvmss {
 }
 
 function space {
-	roots
-	mnts
-	datas
-	printf "\n\n"
-	printf '\e[1;31m%-0s\e[m' "Folders are now going to be shown"
-	printf "\n"
-	datats
-	datcs
-	datds
-	datgs
-	datls
-	datms
-	datps
-	datrs
-	datshs
-	datsrs
-	datsus
-	datts
-	datvs
-	datvims
-	datvimrs
-	datvms
-	datvmss
+    sudo btrfs fi show | head -n 3 | grep "devid" | cut -d ' ' -f 9
 }
