@@ -111,3 +111,7 @@ function cdobs {
 function cdobsh {
 	cdobs "home:fusion809/$1"
 }
+
+function cdpi {
+    cd $HOME/Pictures/$1
+}
