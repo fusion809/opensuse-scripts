@@ -37,3 +37,5 @@ function cdlt {
 function cdt {
   cd $HOME/.themes/$1
 }
+
+alias cdth=cdt
