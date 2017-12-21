@@ -34,6 +34,10 @@ function cdlt {
   cdls "themes/$1"
 }
 
+function cdlw {
+    cdls "wallpapers/$1"
+}
+
 function cdt {
   cd $HOME/.themes/$1
 }
