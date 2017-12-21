@@ -2,6 +2,10 @@ function cdsc {
 	cd "$SCR/$1"
 }
 
+function cdas {
+    cdsc "arch-scripts/$1"
+}
+
 function cdds {
 	cdsc "debian-scripts/$1"
 }
