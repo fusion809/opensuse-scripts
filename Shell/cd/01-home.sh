@@ -22,6 +22,10 @@ function cdcfe {
 	cdd "CodeLite/CPP-Math-Projects/$1"
 }
 
+function cdtx {
+    cdd "Text files/$1"
+}
+
 if ! [[ -d $HOME/Downloads ]]; then
 	mkdir -p $HOME/Downloads
 fi
@@ -115,3 +119,4 @@ function cdobsh {
 function cdpi {
     cd $HOME/Pictures/$1
 }
+
