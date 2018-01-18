@@ -9,3 +9,7 @@ function vgd {
 function vps {
 	sudo vim /etc/sddm.conf
 }
+
+function vfs {
+    sudo vim /etc/fstab
+}
