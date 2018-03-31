@@ -4,9 +4,9 @@ if ! [[ -f /usr/bin/git ]]; then
 fi
 
 # hub
-if ! [[ -f /usr/bin/hub ]]; then
-	zpi hub
-fi
+#if ! [[ -f /usr/bin/hub ]]; then
+#	zpi hub
+#fi
 
 # openSUSE command-line client
 if ! [[ -f /usr/bin/osc ]]; then
