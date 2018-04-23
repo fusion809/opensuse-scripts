@@ -11,7 +11,11 @@ function cdmen {
 }
 
 function cdi {
-  cd $HOME/.icons
+  cd $HOME/.icons/$1
+}
+
+function cdi3 {
+    cd $HOME/.i3/$1
 }
 
 function cdls {
