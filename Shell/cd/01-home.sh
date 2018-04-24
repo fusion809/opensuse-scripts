@@ -14,6 +14,18 @@ if ! [[ -d $HOME/Documents ]]; then
 	mkdir -p $HOME/Documents
 fi
 
+function cdch {
+    cd $HOME/Chem/$1
+}
+
+function cd2d {
+    cdch "2D/$1"
+}
+
+function cd3d {
+    cdch "3D/$1"
+}
+
 function cdd {
 	cd $HOME/Documents/$1
 }
