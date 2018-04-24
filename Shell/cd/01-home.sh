@@ -58,6 +58,10 @@ function cdp {
 	cd $HOME/Programs/$1
 }
 
+function cdpe {
+    cdp "exe/$1"
+}
+
 function cdpr {
 	cdp "rpm/$1"
 }
