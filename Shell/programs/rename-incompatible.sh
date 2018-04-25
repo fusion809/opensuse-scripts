@@ -1,3 +1,3 @@
 function renin {
-    mv $i $i-328-incompatible
+    mv "$1" "$1-328-incompatible"
 }
