@@ -120,6 +120,18 @@ function cdvi {
 	cdvm "ISOs/$1"
 }
 
+function cdvil {
+    cdvi "Linux/$1"
+}
+
+function cdvid {
+    cdvil "Debian/$1"
+}
+ 
+function cdviu {
+    cdvil "Ubuntu/$1"
+}
+
 if ! [[ -d $HOME/OBS ]]; then
 	mkdir -p $HOME/OBS
 fi
