@@ -148,3 +148,6 @@ function cdpi {
     cd $HOME/Pictures/$1
 }
 
+function cdps {
+    cdpi "Screenshots/$1"
+}
