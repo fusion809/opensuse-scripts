@@ -153,7 +153,7 @@ function 0adup {
     specm=$(cat $HOME/OBS/home:fusion809/0ad/0ad.spec | grep "define commit" | cut -d ' ' -f 3)
 
     if [[ $specn == $mastn ]]; then
-         printf "0 A.D. is up to date!"
+         printf "0 A.D. is up to date!\n"
     else
          sed -i -e "s/$specn/$mastn/g" $HOME/OBS/home:fusion809/0ad/0ad.spec
          sed -i -e "s/$specn/$mastn/g" $HOME/OBS/home:fusion809/0ad-data/0ad-data.spec
