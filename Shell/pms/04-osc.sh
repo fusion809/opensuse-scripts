@@ -163,3 +163,20 @@ function 0adup {
          cdobsh 0ad-data; osc ci -m "Bumping $specn->$mastn"
     fi
 }
+
+function openrabup {
+    cdgo OpenRA
+    git pull origin master -q
+    mastn=$(git rev-list --branches master --count)
+    specn=$(cat $HOME/OBS/home:fusion809/openra-bleed/openra-bleed.spec | grep "Version:" | sed 's/Version:\s*//g')
+    comm=$(git log | head -n 1 | cut -d ' ' -f 2)
+    specm=$(cat $HOME/OBS/home:fusion809/openra-bleed/openra-bleed.spec | grep "define commit" | cut -d ' ' -f 3)
+
+    if [[ $specn == $mastn ]]; then
+         printf "OpenRA Bleed is up to date!\n"
+    else
+         sed -i -e "s/$specn/$mastn/g" $HOME/OBS/home:fusion809/openra-bleed/openra-bleed.spec
+         sed -i -e "s/$specm/$comm/g" $HOME/OBS/home:fusion809/openra-bleed/openra-bleed.spec
+         cdobsh openra-bleed; osc ci -m "Bumping $specn->$mastn"
+    fi
+}
