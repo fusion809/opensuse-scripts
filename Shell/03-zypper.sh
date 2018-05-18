@@ -54,7 +54,7 @@ alias zup=zypup
 # Dist upgrade
 function zypdup {
 	sudo zypper refresh
-	sudo zypper dup "$@"
+	sudo zypper dup --allow-vendor-change "$@"
 }
 
 alias dup=zypdup
