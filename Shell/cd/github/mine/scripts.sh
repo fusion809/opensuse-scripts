@@ -1,7 +1,3 @@
-function cdsc {
-	cd "$SCR/$1"
-}
-
 function cdas {
     cdsc "arch-scripts/$1"
 }
