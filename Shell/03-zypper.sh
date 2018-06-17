@@ -92,3 +92,7 @@ if ! `zypper lr | grep "home_fusion809" >/dev/null 2>&1`; then
 	zypar http://download.opensuse.org/repositories/home:fusion809/openSUSE_Tumbleweed/home:fusion809.repo
 	dup
 fi
+
+function vzr {
+    sudo vim /etc/zypp/repos.d/$1.repo
+}
