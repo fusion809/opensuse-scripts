@@ -1,0 +1,2 @@
+#!/bin/bash
+su - avogadro -c "export DISPLAY=':0' && /usr/bin/avogadro $@"

@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo chroot /fedora /usr/local/bin/su-avogadro
