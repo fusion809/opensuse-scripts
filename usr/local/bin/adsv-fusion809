@@ -1,0 +1,2 @@
+#!/bin/bash
+/bin/su - fusion809 -c "export DISPLAY=':0' ; /home/fusion809/BIOVIA/DiscoveryStudio2017R2/bin/DiscoveryStudio2017R2 $@"

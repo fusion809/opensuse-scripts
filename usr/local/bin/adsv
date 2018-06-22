@@ -1,0 +1,16 @@
+#!/bin/bash
+if ! `echo $XDG_SESSION_TYPE | grep x11 > /dev/null 2>&1`; then
+    printf "We're not running on X.Org, Wayland and Mir are unsupported.\n"
+else
+    /usr/bin/xhost +
+    if ! [[ -f /scentific/proc/cpuinfo ]]; then
+         sudo mount -t proc /proc /scientific/proc
+         sudo mount --rbind /dev /scientific/dev
+         sudo mount --make-rslave /scientific/dev
+         sudo mount --rbind /sys /scientific/sys
+         sudo mount --make-rslave /scientific/sys
+         sudo cp -L /etc/resolv.conf /scientific/etc
+    fi
+
+    sudo chroot /scientific /usr/local/bin/adsv-fusion809
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+if ! [[ -f /usr/bin/avogadro ]]; then
+    printf "Avogadro isn't installed.\n" ; exit
+fi
+
+/bin/su - avogadro -c "export DISPLAY=':0' && /usr/bin/avogadro $@"
