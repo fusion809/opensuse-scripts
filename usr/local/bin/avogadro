@@ -1,2 +1,17 @@
 #!/bin/bash
-sudo chroot /fedora /usr/local/bin/su-avogadro
+if ! `echo $XDG_SESSION_TYPE | grep x11 > /dev/null 2>&1`; then
+    printf "We're not running on X.Org, Wayland and Mir are unsupported.\n"
+else
+    /usr/bin/xhost +
+
+    if ! [[ -f /fedora/proc/cpuinfo ]] ; then
+         sudo mount -t proc /proc /fedora/proc
+         sudo mount --rbind /dev /fedora/dev
+         sudo mount --make-rslave /fedora/dev
+         sudo mount --rbind /sys /fedora/sys
+         sudo mount --make-rslave /fedora/sys
+         sudo cp -L /etc/resolv.conf /fedora/etc
+    fi
+
+    sudo chroot /fedora /usr/local/bin/su-avogadro
+fi
