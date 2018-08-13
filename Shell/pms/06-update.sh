@@ -12,4 +12,9 @@ function update {
     if `which apm > /dev/null 2>&1`; then
          apmup
     fi
+    latest-openra-tried=$(ls $HOME/.openra/maps/ra | grep bleed- | tail -n 1)
+    latest-installed=$(cat /usr/lib/openra/VERSION)
+    if [[ ${latest-installed} == ${latest-openra-tried} ]]; then
+         mv $HOME/.openra/maps/ra/${latest-openra-tried}/* $HOME/.openra/maps/ra/${latest-installed}
+    fi
 }
