@@ -1,7 +1,7 @@
 function update {
-	printf '\e[1;34m%-0s\e[m' "Running zypper update..."
+	printf '\e[1;34m%-0s\e[m' "Running zypper ref + dup..."
 	printf "\n"
-	zypup
+	dup
 	printf '\e[1;34m%-0s\e[m' "Updating Flatpaks..."
 	printf "\n"
 	if `which flatpak > /dev/null 2>&1`; then
