@@ -44,12 +44,6 @@ if ! [[ -d $INS ]]; then
 	mkdir -p $INS
 fi
 
-# DS
-export DS=$SCR/debian-scripts
-
-# FS
-export FS=$SCR/fedora-scripts
-
 # JS
 export JS=$SCR/JScripts
 

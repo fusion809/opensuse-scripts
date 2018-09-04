@@ -19,5 +19,9 @@ function cdm {
 }
 
 function cdvi {
-	cd /home/fusion809/"VirtualBox VMs"/ISOs
+	cd "/data/VirtualBox VMs/ISOs/$1"
+}
+
+function cdvil {
+	cdvi "Linux/$1"
 }
