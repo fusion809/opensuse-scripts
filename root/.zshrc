@@ -87,3 +87,4 @@ do
 done
 
 export PATH=$PATH:/sbin
+export PATH="/root/.config/guix/current/bin${PATH:+:}$PATH"
