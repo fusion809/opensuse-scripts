@@ -1,3 +1,6 @@
 [submodule "Shell/common-scripts"]
 	path = Shell/common-scripts
-	url = https://github.com/fusion809/common-scripts
+	url = git://github.com/fusion809/common-scripts.git
+[submodule "Shell/-f"]
+	path = Shell/-f
+	url = git://github.com/fusion809/common-scripts.git
