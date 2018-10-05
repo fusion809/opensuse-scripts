@@ -96,3 +96,9 @@ fi
 function vzr {
     sudo vim /etc/zypp/repos.d/$1.repo
 }
+
+function update {
+	dup
+	flatup
+	nixup
+}
