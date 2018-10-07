@@ -11,6 +11,10 @@ alias zpi=zypin
 alias zpin=zypin
 alias zin=zypin
 
+function zpit {
+	zpi -t pattern "$@"
+}
+
 # Remove software
 function zyprm {
 	sudo zypper rm -y $@
