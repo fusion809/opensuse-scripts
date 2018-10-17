@@ -2,7 +2,6 @@
 export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
 export ZSH_DISABLE_COMPFIX="true"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -52,10 +51,12 @@ ZSH_THEME="hfulldate"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github zsh-syntax-highlighting safe-paste zsh-completions github)
-
+plugins=(git github zsh-syntax-highlighting vi-mode
+#safe-paste zsh-completions
+)
 autoload -U compinit && compinit
-source $ZSH/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # bind UP and DOWN arrow keys
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
@@ -75,9 +76,30 @@ bindkey '^[[B' history-substring-search-down
 # bindkey -M vicmd 'j' history-substring-search-down
 # User configuration
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-source $ZSH/oh-my-zsh.sh
 
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -85,6 +107,3 @@ for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
-
-# added by travis gem
-[ -f /home/fusion809/.travis/travis.sh ] && source /home/fusion809/.travis/travis.sh
