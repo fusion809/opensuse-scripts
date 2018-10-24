@@ -19,7 +19,7 @@ function cdm {
 }
 
 function cdvi {
-	cd "/data/VirtualBox VMs/ISOs/$1"
+	cd "/data/VirtualBox VMs/iso/$1"
 }
 
 function cdvil {
