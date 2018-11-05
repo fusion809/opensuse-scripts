@@ -51,7 +51,7 @@ ZSH_THEME="hfulldate"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github zsh-syntax-highlighting vi-mode
+plugins=(git github zsh-syntax-highlighting vi-mode zsh-autosuggestions
 #safe-paste zsh-completions
 )
 autoload -U compinit && compinit
@@ -107,3 +107,6 @@ for i in $HOME/Shell/*.sh
 do
   . "$i"
 done
+
+# added by travis gem
+[ -f /home/fusion809/.travis/travis.sh ] && source /home/fusion809/.travis/travis.sh
