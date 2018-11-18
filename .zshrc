@@ -110,3 +110,4 @@ done
 
 # added by travis gem
 [ -f /home/fusion809/.travis/travis.sh ] && source /home/fusion809/.travis/travis.sh
+source $HOME/anaconda3/etc/profile.d/conda.sh
